@@ -17,7 +17,7 @@
 
             padding: 2em;
 
-            text-allign: center;
+            text-align: center;
         }
 
     </style>
