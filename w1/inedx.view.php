@@ -24,14 +24,16 @@
 </head>
 <body>
 
+ <!--for each loop for every animal in it the array it will print here-->
 
     <ul>
 
         <?php
 
-            foreach ($names as $name) {
+            
+            foreach ($animals as $animal) {
 
-                echo "<li?$name</li>";
+                echo "<li?$animal</li>";
             }
 
         ?>
