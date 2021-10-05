@@ -21,7 +21,7 @@ $animals = [
 
 
 
-require 'index.view.php';
+require 'w1\inedx.view.php';
 
 
 //making my index file require my other index file
