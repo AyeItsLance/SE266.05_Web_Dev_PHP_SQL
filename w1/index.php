@@ -30,10 +30,12 @@
 
         <?php
 
+            require 'index.view.php';
+
             
             foreach ($animals as $animal) {
 
-                echo "<li?$animal</li>";
+                echo "<li>$amimal</li>";
             }
 
         ?>
