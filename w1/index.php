@@ -28,6 +28,8 @@
 
     <ul>
 
+        <p>Hello</p>
+
         <?php
 
             require 'w1/index.view.php';
