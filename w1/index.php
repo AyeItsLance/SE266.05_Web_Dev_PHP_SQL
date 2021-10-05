@@ -32,7 +32,21 @@
 
         <?php
 
-            require '/Users/008010258/Desktop/SE266.05_Web_Dev_PHP_SQL/w1/index.view.php';
+            $animals = [
+
+                'Lion',
+
+                'Dog',
+
+                'Cat',
+
+                'Tiger',
+                
+                'Bird',
+
+                'Lizard',
+
+            ];
 
             
             foreach ($animals as $animal) {
