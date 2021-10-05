@@ -48,6 +48,20 @@
 
             ];
 
+        ?>
+
+
+     
+
+                    
+        <?php foreach ($animals as $animal) : ?>
+
+           <li><?= $animal; ?></li>
+
+        <?php endforeach; ?>
+
+        <?php
+
             
             foreach ($animals as $animal) {
 
