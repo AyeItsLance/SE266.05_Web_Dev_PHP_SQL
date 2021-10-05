@@ -20,10 +20,6 @@ $animals = [
 //end of array
 
 
-
-require 'index.view.php';
-
-
 //making my index file require my other index file
 
 

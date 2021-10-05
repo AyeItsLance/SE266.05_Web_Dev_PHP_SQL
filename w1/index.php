@@ -30,7 +30,7 @@
 
         <?php
 
-            require 'index.view.php';
+            require 'w1/index.view.php';
 
             
             foreach ($animals as $animal) {
