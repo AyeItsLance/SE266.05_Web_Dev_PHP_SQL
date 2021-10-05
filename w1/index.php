@@ -19,7 +19,7 @@ $animals = [
 
 //end of array
 
-echo 'hello'
+echo 'hello';
 
 
 
