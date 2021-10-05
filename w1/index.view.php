@@ -21,7 +21,7 @@ $animals = [
 
 
 
-require 'C:\Users\James\OneDrive\Desktop\NEIT Stuff\TERM 5\PHP\SE266.05_Web_Dev_PHP_SQL\w1\inedx.view.php';
+require '/Users/008010258/Desktop/SE266.05_Web_Dev_PHP_SQL/w1/index.php';
 
 
 //making my index file require my other index file
