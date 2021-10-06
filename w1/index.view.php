@@ -28,11 +28,13 @@
 
     <ul>
 
+        <!--my hello statement was test to make sure my code can print to my browser
+
         <p>Hello</p>
 
+        -->
 
-
-     
+        <!--Start for php code-->
 
                     
         <?php foreach ($animals as $animal) : ?>
@@ -40,8 +42,6 @@
            <li><?= $animal; ?></li>
 
         <?php endforeach; ?>
-
-
     
 
     </ul>
