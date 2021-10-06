@@ -18,7 +18,7 @@ $animals = [
 ];
 
 
-require '/w1/index.view.php';
+require 'index.view.php';
 
 //end of array
 
