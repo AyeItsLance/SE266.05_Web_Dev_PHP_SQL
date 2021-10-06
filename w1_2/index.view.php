@@ -10,6 +10,9 @@
 
     <ul>
 
+        <!--Displaying the data
+
+
         <?php foreach ($persons as $feature => $val) : ?>
 
             <li><strong><?= $feature; ?></strong> <?= $val; ?></li>
@@ -18,6 +21,21 @@
 
 
         <?php endforeach; ?>
+
+        
+        <!--Start of homework-->
+
+
+        <?php foreach ($chores as $questions => $answers) : ?>
+
+            <li><strong><?= $questions; ?></strong> <?= $answers; ?></li>
+
+            <!--Displaying the data-->
+
+
+        <?php endforeach; ?>
+
+
 
     </ul>
     
