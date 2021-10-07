@@ -10,23 +10,13 @@
 
     <ul>
 
-        <!--Displaying the data
-
-
-        <?php foreach ($persons as $feature => $val) : ?>
-
-            <li><strong><?= $feature; ?></strong> <?= $val; ?></li>
-
-            <!--Displaying the data-->
-
-
-        <?php endforeach; ?>
+    
 
         
         <!--Start of homework-->
 
 
-        <?php foreach ($chores as $questions => $answers) : ?>
+        <?php foreach ($task as $questions => $answers) : ?>
 
             <li><strong><?= $questions; ?></strong> <?= $answers; ?></li>
 
