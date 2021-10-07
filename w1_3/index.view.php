@@ -47,15 +47,8 @@
 
             <strong>Status: </strong>
 
+            <!--When having a ! in front of something it means not  for example if (! true) this means not true-->
 
-            <?php 
-                if( ! true) {
-
-                    echo 'Incomplete';
-
-                }
-
-            ?>
 
             
             
@@ -78,7 +71,18 @@
         <li>
 
 
+            <strong>Was it Started:</strong>
 
+            <?php if ($task['startYet'])  : ?>
+
+                <span class="icon">Yes &#9989;</span>
+
+                
+            <?php else: ?>
+
+                <span class="icon">No &#10060;</span>
+
+            <?php endif; ?>
 
 
 
