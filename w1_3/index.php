@@ -10,7 +10,7 @@ $task = [
 
     'assigned_to' => 'Lance',
 
-    'completed' => false
+    'completed' => false,
 
     'startYet' => true
 
