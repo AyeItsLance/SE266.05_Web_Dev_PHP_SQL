@@ -27,7 +27,7 @@ $task = [
 
     'title' => 'Do the Dishes',
 
-    'Who Does it' => 'Lance Lespinasse',
+    'who_DoesIt' => 'Lance Lespinasse',
 
     'due' => 'Tommorow',
 

@@ -9,12 +9,33 @@
 <body>
 
 
-    <?php
+    <h1>Tasks for today</h1>
+
+
+    <ul>
+
+
+        <?php foreach ($task as $heading => $value) :?>
+
+
+            <li>
+
+                <strong><?= ucwords($heading); ?>: </strong> <?= $value; ?>
+        
+            </li>
+
+        <?php endforeach; ?>
 
 
 
+        <li>
 
-    ?>
+
+        </li>
+
+
+
+    </ul>
 
     
 </body>
