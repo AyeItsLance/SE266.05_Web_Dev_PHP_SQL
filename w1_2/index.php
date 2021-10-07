@@ -25,21 +25,21 @@ unset($persons['age']);
 
 $task = [      
 
-    'title' => 'dishes'
+    'title' => 'dishes',
 
-    'Who Does it' => 'Lance'
+    'Who Does it' => 'Lance',
 
-    'Due' => 'Tommorow'
+    'Due' => 'Tommorow',
 
-    'Completed?' => 'Yes'
+    'Completed?' => 'Yes',
 
     //
 
-    'title' => 'mop'
+    'title' => 'mop',
 
-    'Who Does it' => 'Lance'
+    'Who Does it' => 'Lance',
 
-    'Due' => 'Next Week'
+    'Due' => 'Next Week',
 
     'completed' => 'no'
 
