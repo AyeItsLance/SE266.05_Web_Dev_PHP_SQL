@@ -12,7 +12,7 @@ $task = [
 
     'completed' => false,
 
-    'startYet' => true
+    'startYet' => false
 
 
 ];
