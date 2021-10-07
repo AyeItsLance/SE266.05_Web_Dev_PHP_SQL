@@ -29,6 +29,8 @@ $task = [
 
     'Who Does it' => 'Lance'
 
+    'Due' => 'Tommorow'
+
     'Completed?' => 'Yes'
 
     //
@@ -36,6 +38,8 @@ $task = [
     'title' => 'mop'
 
     'Who Does it' => 'Lance'
+
+    'Due' => 'Next Week'
 
     'completed' => 'no'
 
