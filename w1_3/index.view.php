@@ -14,6 +14,8 @@
 
     <ul>
 
+        \
+
 
         <?php foreach ($task as $heading => $value) :?>
 
@@ -28,7 +30,36 @@
 
 
 
+
+        <!--example of having some control over my array titles-->
         <li>
+
+            <strong>Name: </strong> <?= $task['title']; ?>
+
+
+        </li>
+
+        <li>
+
+            <strong>Due Date: </strong> <?= $task['due']; ?>
+
+
+        </li>
+
+        <li>
+
+            <strong>Who Does It: </strong> <?= $task['assigned_to']; ?>
+
+
+        </li>
+
+        <li>
+
+            <!--? means that if the thing we are checking is true it will print "Complete" If false it will print "Incompletet-->
+
+            <!--? 'do something if true' : 'do something if false'-->
+
+            <strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
 
 
         </li>
