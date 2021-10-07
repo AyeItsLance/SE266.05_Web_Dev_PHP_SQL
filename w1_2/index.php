@@ -29,9 +29,9 @@ $task = [
 
     'Who Does it' => 'Lance Lespinasse',
 
-    'Due' => 'Tommorow',
+    'due' => 'Tommorow',
 
-    'Completed?' => 'Yes',
+    'completed' => 'Yes',
 
     //
 
