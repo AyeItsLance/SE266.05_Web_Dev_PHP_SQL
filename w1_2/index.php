@@ -35,14 +35,6 @@ $task = [
 
     //
 
-    'title' => 'mop',
-
-    'Who Does it' => 'Lance',
-
-    'Due' => 'Next Week',
-
-    'completed' => 'no'
-
 
 ];
 
