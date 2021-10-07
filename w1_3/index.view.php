@@ -14,20 +14,6 @@
 
     <ul>
 
-        \
-
-
-        <?php foreach ($task as $heading => $value) :?>
-
-
-            <li>
-
-                <strong><?= ucwords($heading); ?>: </strong> <?= $value; ?>
-        
-            </li>
-
-        <?php endforeach; ?>
-
 
 
 
@@ -59,7 +45,41 @@
 
             <!--? 'do something if true' : 'do something if false'-->
 
-            <strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
+            <strong>Status: </strong>
+
+
+            <?php 
+                if( ! true) {
+
+                    echo 'Incomplete';
+
+                }
+
+            ?>
+
+            
+            
+            <?php if ($task['completed'])  : ?>
+
+                <span class="icon">Completed &#9989;</span>
+
+                
+            <?php else; ?>
+
+                <span class="icon">Incomplete</span>
+
+            <?php endif; ?>
+
+            <!--When having a ! it means not true so ! true means not true-->
+
+
+        </li>
+
+        <li>
+
+
+        
+
 
 
         </li>
