@@ -64,7 +64,7 @@
                 <span class="icon">Completed &#9989;</span>
 
                 
-            <?php else; ?>
+            <?php else: ?>
 
                 <span class="icon">Incomplete</span>
 
@@ -78,7 +78,7 @@
         <li>
 
 
-        
+
 
 
 
