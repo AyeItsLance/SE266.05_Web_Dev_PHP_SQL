@@ -30,9 +30,6 @@ $task = [
 
 
 
-require 'index.view.php';
-
-
 require 'functions.php'
 
 
