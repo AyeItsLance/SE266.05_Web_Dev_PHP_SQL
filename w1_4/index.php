@@ -1,7 +1,7 @@
 <?php
 
 
-require 'functions.php';
+
 
 function dd($val) {
       
