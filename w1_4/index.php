@@ -5,7 +5,13 @@ require 'functions.php'
 
 
 
-$animals = ['dog', 'cat'];
+// $animals = [
+    
+//     'dog', 
+
+//     'cat'
+
+// ];
 
 
 
