@@ -23,7 +23,7 @@ $task = [
 
     'whoDoesIt' => 'Lance',
 
-    'completed' => true
+    'completed' => 'true'
     
 ];
 
