@@ -13,19 +13,24 @@ require 'functions.php'
 
 // ];
 
-
-
 $task = [
 
-    'title' => 'Go to the Mall',
 
-    'due' => 'tommorow',
+    'title' => 'Finish homework',
 
-    'whoDoesIt' => 'Lance',
+    'due' => 'today',
 
-    'completed' => 'true'
-    
+    'assigned_to' => 'Lance',
+
+    'completed' => false,
+
+    'startYet' => false
+
+
 ];
+
+
+
 
 //die means my program would end once the die function was triggered
 
