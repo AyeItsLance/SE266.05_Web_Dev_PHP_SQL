@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php'
+require 'index.php';
 
 
 function dd($val)
@@ -11,7 +11,7 @@ function dd($val)
 
    echo '</pre>'
 
-}
+};
 
 
 
