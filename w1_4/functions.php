@@ -1,5 +1,7 @@
 <?php
 
+require 'index.php'
+
 
 function dd($val)
 {
@@ -13,4 +15,3 @@ function dd($val)
 
 
 
-require 'index.php';

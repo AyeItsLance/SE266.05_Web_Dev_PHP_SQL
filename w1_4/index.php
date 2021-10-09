@@ -1,6 +1,9 @@
 <?php
 
 
+require 'functions.php'
+
+
 
 $animals = ['dog', 'cat'];
 
@@ -27,10 +30,6 @@ $task = [
 
 //dd == die & dump
 
-
-
-
-require 'functions.php'
 
 
 dd($task)
