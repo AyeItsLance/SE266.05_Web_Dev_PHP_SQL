@@ -8,11 +8,11 @@ $animals = ['dog', 'cat'];
 
 $task = [
 
-    'title' => 'Go to the Mall'
+    'title' => 'Go to the Mall',
 
-    'due' => 'tommorow'
+    'due' => 'tommorow',
 
-    'whoDoesIt' => 'Lance'
+    'whoDoesIt' => 'Lance',
 
     'completed' => true
     
