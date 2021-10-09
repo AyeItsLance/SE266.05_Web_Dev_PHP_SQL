@@ -28,16 +28,7 @@ $task = [
 
 ];
 
-function dd($val) {
-   
-    echo '<pre>';
- 
-    die(var_dump($val));
- 
-    echo '</pre>';
- 
-}
- 
+
 
 
 //die means my program would end once the die function was triggered
