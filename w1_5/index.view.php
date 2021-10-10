@@ -10,12 +10,7 @@
 
     <?php
 
-        function fizzbuzz($num)
-        {
 
-
-            
-        }
 
 
         require 'index.php';
