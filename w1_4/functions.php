@@ -5,15 +5,15 @@ require 'index.php';
 
 
 
-// function dd($val) {
+   // function dd($val) {
+      
+   //    echo '<pre>';
 
-//    echo '<pre>';
+   //    die(var_dump($val));
 
-//    die(var_dump($val));
+   //    echo '</pre>';
 
-//   echo '</pre>';
-
-// }
+   // }
 
 
 
