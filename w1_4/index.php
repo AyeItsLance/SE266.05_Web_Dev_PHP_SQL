@@ -5,6 +5,16 @@
 
 require 'functions.php';
 
+function dd($val) {
+
+    echo '<pre>';
+ 
+    die(var_dump($val));
+ 
+   echo '</pre>';
+ 
+ }
+
 
 // $animals = [
     
@@ -33,7 +43,9 @@ $task = [
 
 
 
+//ask prof got weird error don't get it
 
+//Fatal error: Cannot redeclare dd() (previously declared in C:\xampp\htdocs\SE266\w1_4\functions.php:8) in C:\xampp\htdocs\SE266\w1_4\functions.php on line 8
 
 
 //die means my program would end once the die function was triggered
