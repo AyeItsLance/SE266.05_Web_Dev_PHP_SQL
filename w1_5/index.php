@@ -12,20 +12,44 @@
 
 
 
+        //creating my function with a number var
+        
+        function fizzBuzz($num){
 
-        require 'index.php';
+            <?php if($num % 2 == 0) :?>        
 
-        for( $i=1; $i<=10; $i++ )
+                <print>fizz</print> <!--If my number can be divided by 2 it means that the number can be a multiple of 2-->
+
+            <?php elseif($num % 3 == 0) :?>
+
+                <print>buzz</print> <!--If my number can be divided by 3 it means that the number can be a multiple of 3-->
+            
+            <?php elseif($num % 6 == 0) :?>
+
+                <print>fizz buzz</print>
+                <!--If my number can be divided by 6 it means that the number can be a multiple of 2 and 3 together-->
+
+            <?php endif;
+        }
+
+
+    
+        //creating my counter that will cycle 100 times
+        for($i = 1; $i <= 100; $i++)
         {
 
-            echo $i;
-            echo "<br>";
+            fizzBuzz($i);       //calling my function
+
 
         }
 
+
         
 
+        //end of php code!!!
     ?>
+
+
     
 </body>
 </html>
