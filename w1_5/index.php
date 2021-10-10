@@ -16,7 +16,7 @@
         
         function fizzBuzz($num){
 
-            <?php if($num % 2 == 0) :?>        
+            if($num % 2 == 0) :?>        
 
                 <print>fizz</print> <!--If my number can be divided by 2 it means that the number can be a multiple of 2-->
 
