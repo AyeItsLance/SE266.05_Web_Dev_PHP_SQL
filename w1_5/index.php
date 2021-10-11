@@ -34,6 +34,7 @@
             <?php else :?>
 
                 <print>$num</print>
+                <br>
 
             <?php endif;
         }
