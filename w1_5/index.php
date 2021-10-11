@@ -31,9 +31,9 @@
                 <print>fizz buzz</print>
                 <br>
                 <!--If my number can be divided by 6 it means that the number can be a multiple of 2 and 3 together-->
-            <?php elseif :?>
+            <?php else :?>
 
-                <print><?$num;?></print>
+                <print><?=$num;?></print>
                 <br>
 
                 <!--Every other number prints through here-->
