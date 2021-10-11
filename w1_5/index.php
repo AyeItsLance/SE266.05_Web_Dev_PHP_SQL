@@ -26,7 +26,7 @@
                 <print>buzz</print>
                 <br> <!--If my number can be divided by 3 it means that the number can be a multiple of 3-->
             
-            <?php elseif($num % 2 == 0 && $num % 3 == 0) :?>
+            <?php elseif($num % 3 == 0 && $num % 2 == 0) :?>
 
                 <print>fizz buzz</print>
                 <br>
