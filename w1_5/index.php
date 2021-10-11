@@ -26,11 +26,10 @@
                 <print>buzz</print>
                 <br> <!--If my number can be divided by 3 it means that the number can be a multiple of 3-->
             
-            <?php elseif($num % 6 == 0) :?>
+            <?php elseif($num % 6 == 0) 
 
-                <print>fizz buzz</print>
-                <br>
-                <!--If my number can be divided by 6 it means that the number can be a multiple of 2 and 3 together-->
+                echo $num
+                :?>
             <?php else :?>
 
                 <print>$num</print>
