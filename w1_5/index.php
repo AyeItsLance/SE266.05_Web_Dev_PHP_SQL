@@ -28,7 +28,7 @@
             
             <?php elseif($num % 6 == 0) 
 
-                echo $num
+                echo $num;
                 :?>
             <?php else :?>
 
