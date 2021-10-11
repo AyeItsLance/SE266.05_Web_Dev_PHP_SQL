@@ -19,8 +19,8 @@
             if($num % 2 == 0 && $num % 3 == 0) :?>        
 
                 <print>fizz buzz</print>
-                <br> <!--If my number can be divided by 2 it means that the number can be a multiple of 2 line break for better view-->
-
+                <br> <!--If my number can be divided by 2 and 3 it means that the number can be a multiple of 2 and both 3 so we'd give it fizz buzz line break for better view-->
+                <!--Early version had something different at the top so we need to find both 2 and 3 first instead!!! -->
             <?php elseif($num % 3 == 0) :?>
 
                 <print>buzz</print>
@@ -30,7 +30,7 @@
 
                 <print>fizz</print>
                 <br>
-                <!--If my number can be divided by 6 it means that the number can be a multiple of 2 and 3 together-->
+                <!--If my number can be divided by 2 it means that the number can be a multiple of 2-->
             <?php else :?>
 
                 <print><?=$num;?></print>
