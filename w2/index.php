@@ -64,15 +64,15 @@
         <h3>PHP Assignments</h3>
 
         <ul> 
-            <li><a href='w1/index.view.php'>Week 1 Basic PHP</a></li>
+            <li><a href='http://se266-php-lespinasse.herokuapp.com/w1/'>Week 1 Basic PHP</a></li>
             
-            <li><a href='w1_2/index.view.php'>Week 1 Arrays</a></li>
+            <li><a href='https://se266-php-lespinasse.herokuapp.com/w1_2/'>Week 1 Arrays</a></li>
             
-            <li><a href='w1_3/index.view.php'>Week 1 Booleans</a></li>
+            <li><a href='https://se266-php-lespinasse.herokuapp.com/w1_3/'>Week 1 Booleans</a></li>
             
-            <li><a href='w1_4/index.php'>Week 1 Functions</a></li>
+            <li><a href='https://se266-php-lespinasse.herokuapp.com/w1_4/'>Week 1 Functions</a></li>
             
-            <li><a href='w1_5/index.php'>Week 1 FizzBuzz</a></li>
+            <li><a href='https://se266-php-lespinasse.herokuapp.com/w1_5/'>Week 1 FizzBuzz</a></li>
 
             <li><a href='#'>Week 2 Paitent Form</a></li>
                 
