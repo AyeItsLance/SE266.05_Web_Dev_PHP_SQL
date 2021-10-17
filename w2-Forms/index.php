@@ -131,7 +131,7 @@
 
             //BMI calculator
 
-            $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT)
+            $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT);
 
             if($number1 == ''){
 
@@ -139,7 +139,7 @@
 
             }
 
-            $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT)
+            $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT);
         
             if($number2 == ''){
 
