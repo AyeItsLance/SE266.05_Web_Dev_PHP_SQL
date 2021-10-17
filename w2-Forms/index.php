@@ -50,7 +50,14 @@
         <br>
         <br>
 
+
+        <input type='date' name='birthDate' />
+
+        <br>
         <input type='submit' name='submitBtn' />
+
+
+       
 
     </form>
 
