@@ -34,6 +34,17 @@
         <input type='text' name='lName' placeholder='Last Name'/>
 
         <br>
+        <label for='married'>Are you Married?</label><br>
+
+        <input type='radio' name='marriedYes'>
+        <label for ='mYes'>Yes</label>
+        
+        <br>
+
+        <input type='radio' name='marriedNo'>
+        <label for ='mNo'>No</label>
+        
+        <br>
 
         <input type='submit' name='submitBtn' />
 
