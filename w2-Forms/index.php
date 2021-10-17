@@ -43,7 +43,7 @@
             echo 'Form Submited <hr/>';
 
 
-            $value = filter_input(INPUT_POST, 'fName')
+            $value = filter_input(INPUT_POST, 'fName');
 
 
 
