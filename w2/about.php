@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Helo</title>
+    <title>About Me</title>
 </head>
 <body>
-<style>
+    <style>
 
         .navbar {
 
@@ -39,30 +39,53 @@
 
         li {
         font-family: 'Times New Roman', Times, serif;
-        }
+        }   
     
 </style>
-    
+
     <header class='navbar'>
-    
+
         <a href='index.html'><strong>Home</strong></a>
-    
+
         <a href='https://github.com/AyeItsLance/SE266.05_Web_Dev_PHP_SQL'><strong>Github</strong></a>
-    
+
         <a href='php.html'><strong>PHP Resources</strong></a>
-    
+
         <a href='git.html'><strong>Git Resources</strong></a>
-    
+
         <a href="about.html"><strong>About Me</strong></a>
     </header>
+
+    <main>
+        <ul>
+
+            <li>I like cars, I don't know to much about them but they've always have intrested me.</li>
+
+            <br>
+
+            <li>I enjoy learning new things for instance not to long ago I tried learning how to build a computer, currently that's a work in progress but im slowly learning from my mistakes.</li>
+            
+            <br>
+
+            <li>Lastly I also enjoy playing games and hanging out with friends on my free time, I try to keep social because I think it's a important part of everyday life.</li>
+        </ul>
+
+    </main>
 
     <footer>
 
         <hr>
 
-        Last Updatd on ---
+        <?php       
+        $file = basename($_SERVER['PHP_SELF']);
+        $mod_date=date("F d Y h:i:s A", filemtime($file));
+        echo "File last updated $mod_date ";
+        //date.timezone = "Europe/Athens"
+        ?>
 
     </footer>
     
+    
 </body>
+
 </html>
