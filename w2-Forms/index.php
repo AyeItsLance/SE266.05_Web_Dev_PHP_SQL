@@ -28,12 +28,26 @@
 
 
 
-        function bmiNumber($num1, $num2) {
+        function bmiHeight($num1, $num2) {
 
-            $total = $num1 * 12 + $num2;
+            $combined = $num1 * 12 + $num2;
+
+
+            $total = $combined * 0.0254;
+
 
             return $total;
             
+        }
+
+
+        function bmiWeight($num1){
+
+            $total = $num1 / 2.20462;
+
+            return $total
+
+
         }
 
     ?>
