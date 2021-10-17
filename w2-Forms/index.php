@@ -54,6 +54,8 @@
 
     <h1>Please Sign This Form</h1>
 
+    <!--ALL MY FORM INFORMATIONS-->
+
     <form action='index.php' method='post'>
         <label><strong>First Name</strong></label>
         <input type='text' name='fName' placeholder='First Name'/>
@@ -86,50 +88,60 @@
         <input type='text' name='feet' placeholder='Feet'/>
         <input type='text' name='inches' placeholder='Inches'/>
 
+
+        <br>
+
+        <label><strong>Weight in LBS</strong></label>
+        <input type='text' name='weight' placeholder='Weight'/>
+
+
+
         <br>
         <input type='submit' name='submitBtn' />
 
 
        
 
-    </form>
+    </form> <!--END OF FORM-->
 
 
     <?php   
 
         //first we will be setting up the first and last names
 
-        if(isset($_POST['submitBtn'])) {
+        if(isset($_POST['submitBtn'])) {        //all of my code will activate once my submit btn is pressed
 
             echo '<hr/> Form Submited <br/>';
 
-            $firstName = filter_input(INPUT_POST, 'fName');
+            $firstName = filter_input(INPUT_POST, 'fName');                 //grabbing my first name and storing it
 
             if($firstName == ''){
 
-                echo 'Make sure your first name is a real name!<br>';
+                echo 'Make sure your first name is a real name!<br>';       //making sure my first name has a value
 
             }
 
-            $lastName = filter_input(INPUT_POST, 'lName');
+            $lastName = filter_input(INPUT_POST, 'lName');      //grabbing my last name and storing it
 
             if($lastName == ''){
 
-                echo 'Make sure your last name is a real name!<br>';
+                echo 'Make sure your last name is a real name!<br>';        //making sure my last name has a value
 
             }
+
+            //after grabbing my first and last names fields I store it into Full name which is at the bottom
 
 
             //now on to marriage
 
 
-            $marriedYes = filter_input(INPUT_POST, 'marriedYes');
+            $marriedYes = filter_input(INPUT_POST, 'marriedYes');       //storing the yes value
 
-            $marriedNo = filter_input(INPUT_POST, 'marriedNo');
+            $marriedNo = filter_input(INPUT_POST, 'marriedNo');     //storing the no value
 
             if($marriedYes == '' && $marriedNo == ''){
 
-                echo 'Make sure you select your mariage status! <br>';
+                echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
             }
 
@@ -145,7 +157,7 @@
 
             //BMI calculator
 
-            $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT);
+            $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT);     //my number one is height in feet
 
             if($number1 == ''){
 
@@ -153,7 +165,7 @@
 
             }
 
-            $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT);
+            $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT);           //my number 2 is height in inches
         
             if($number2 == ''){
 
@@ -161,9 +173,23 @@
 
             }
 
-            $total1 = bmiHeight($number1, $number2);
+            $number3 = filter_input(INPUT_POST, 'weight', FILTER_VALIDATE_FLOAT);           //my number 3 is my weight
 
-            echo $total1;
+            if($number3 == ''){
+
+                echo 'Make sure your weight is a real number!<br>';
+
+            }
+
+
+            $height = bmiHeight($number1, $number2);
+
+            $weight = bmiWeight($number3);
+            
+
+            $totalBMI = $weight / ($height * $height);
+
+            echo $totalBMI;
 
 
            
