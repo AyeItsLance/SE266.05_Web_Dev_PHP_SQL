@@ -31,7 +31,11 @@
 
         <input type='text' name='fName' placeholder='First Name'/>
 
+        <br>
+
         <input type='text' name='lName' placeholder='Last Name'/>
+
+        <br>
 
         <input type='submit' name='submitBtn' />
 
