@@ -40,11 +40,11 @@
 
         if(isset($_POST['submitBtn'])) {
 
-            echo '<hr/> Form Submited ';
+            echo '<hr/> Form Submited <br/>';
 
             $value = filter_input(INPUT_POST, 'fName');
 
-            echo $value;
+            echo 'First Name =', $value;
 
         } else{
             echo '<hr/>Loading information';
