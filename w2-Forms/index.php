@@ -27,7 +27,7 @@
 
     ?>
 
-    <for action='index.php' method='post'>
+    <form action='index.php' method='post'>
 
         <input type='text' name='fName' placeholder='First Name'/>
 
@@ -44,7 +44,7 @@
 
             $value = filter_input(INPUT_POST, 'fName');
 
-            echo $_POST['fName'];
+            echo $value;
 
         } else{
             echo '<hr/>Loading information';
