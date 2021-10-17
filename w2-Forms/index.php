@@ -85,9 +85,21 @@
 
             $marriedYes = filter_input(INPUT_POST, 'marriedYes')
 
+            if($marriedYes == ''){
+
+                echo 'Make sure you select your mariage status!';
+
+            }
+
             
 
             $marriedNo = filter_input(INPUT_POST, 'marriedNo')
+
+            if($marriedNo == ''){
+
+                echo 'Make sure you select your mariage status!';
+
+            }
 
 
 
