@@ -26,6 +26,16 @@
             }
         }
 
+
+
+        function bmiNumber($num1, $num2) {
+
+            $num1 * 12 + $num2 = $total;
+
+            return $total;
+            
+        }
+
     ?>
 
     <h1>Please Sign This Form</h1>
@@ -55,6 +65,12 @@
 
         <label><strong>Date of Birth</strong></label>
         <input type='date' name='birthDate' />
+
+        <br>
+
+        <label><strong>Height</strong></label>
+        <input type='text' name='feet' placeholder='Feet'/>
+        <input type='text' name='inches' placeholder='Inches'/>
 
         <br>
         <input type='submit' name='submitBtn' />
@@ -103,7 +119,38 @@
 
             }
 
+
+            //my set up for age
             
+
+
+
+
+
+
+
+            //BMI calculator
+
+            $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT)
+
+            if($number1 == ''){
+
+                echo 'Make sure your heigh is a real number!<br>';
+
+            }
+
+            $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT)
+        
+            if($number2 == ''){
+
+                echo 'Make sure your heigh is a real number!<br>';
+
+            }
+
+            $total = bmiNumber($number1, $number2)
+
+            echo $total
+
 
            
 
