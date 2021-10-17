@@ -46,7 +46,7 @@
 
             echo '<hr/> Form Submited <br/>';
 
-            $firstName = filter_input(INPUT_POST, 'fName';
+            $firstName = filter_input(INPUT_POST, 'fName');
 
             if($firstName == ''){
 
