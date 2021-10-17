@@ -45,7 +45,7 @@
 
             $total = $num1 / 2.20462;
 
-            return $total
+            return $total;
 
 
         }
