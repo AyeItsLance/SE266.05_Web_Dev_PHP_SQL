@@ -30,7 +30,7 @@
 
         function bmiNumber($num1, $num2) {
 
-            $num1 * 12 + $num2 = $total;
+            $total = $num1 * 12 + $num2;
 
             return $total;
             
