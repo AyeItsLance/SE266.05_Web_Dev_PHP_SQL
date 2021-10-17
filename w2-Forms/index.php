@@ -38,7 +38,7 @@
         <br>
         <br>
 
-        <label for='married'>Are you Married?</label><br>
+        <label for='married'><strong>Married?</strong></label><br>
 
         <input type='radio' name='marriedYes'>
         <label for ='mYes'>Yes</label>
