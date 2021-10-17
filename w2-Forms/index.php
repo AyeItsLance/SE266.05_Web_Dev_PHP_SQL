@@ -31,8 +31,6 @@
 
         <input type='text' name='fName' placeholder='First Name'/>
 
-        <br>
-
         <input type='text' name='lName' placeholder='Last Name'/>
 
         <br>
@@ -48,7 +46,13 @@
 
             echo '<hr/> Form Submited <br/>';
 
-            $firstName = filter_input(INPUT_POST, 'fName');
+            $firstName = filter_input(INPUT_POST, 'fName', VALIDATE_ALPHA);
+
+            if($firstName == ''){
+
+                echo 'Make sure your first name is a real name!'
+
+            }
 
             $lastName = filter_input(INPUT_POST, 'lName');
 
