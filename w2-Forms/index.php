@@ -44,15 +44,11 @@
 
             $value = filter_input(INPUT_POST, 'fName');
 
-            echo $value;
+            echo $_POST['fName'];
 
         } else{
             echo '<hr/>Loading information';
         }
-
-
-
-
 
 
     ?>
