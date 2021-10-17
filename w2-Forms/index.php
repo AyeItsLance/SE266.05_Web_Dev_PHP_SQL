@@ -67,7 +67,7 @@
 
             if($firstName == ''){
 
-                echo 'Make sure your first name is a real name!';
+                echo 'Make sure your first name is a real name!<br>';
 
             }
 
@@ -75,7 +75,7 @@
 
             if($lastName == ''){
 
-                echo 'Make sure your last name is a real name!';
+                echo 'Make sure your last name is a real name!<br>';
 
             }
 
