@@ -45,15 +45,15 @@
     
     <header class='navbar'>
     
-        <a href='index.html'><strong>Home</strong></a>
+        <a href='index.php'><strong>Home</strong></a>
     
         <a href='https://github.com/AyeItsLance/SE266.05_Web_Dev_PHP_SQL'><strong>Github</strong></a>
 
-        <a href='php.html'><strong>PHP Resources</strong></a>
+        <a href='php.php'><strong>PHP Resources</strong></a>
     
-        <a href='git.html'><strong>Git Resources</strong></a>
+        <a href='git.php'><strong>Git Resources</strong></a>
     
-        <a href="about.html"><strong>About Me</strong></a>
+        <a href="about.php"><strong>About Me</strong></a>
         
     </header>
 
