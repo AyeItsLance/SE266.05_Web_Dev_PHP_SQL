@@ -50,7 +50,7 @@
         <br>
         <br>
 
-
+        <p>Date Of Birth</p>
         <input type='date' name='birthDate' />
 
         <br>
