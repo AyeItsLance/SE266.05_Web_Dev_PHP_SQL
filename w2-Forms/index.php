@@ -46,7 +46,7 @@
 
             echo '<hr/> Form Submited <br/>';
 
-            $firstName = filter_input(INPUT_POST, 'fName', FILTER_VALIDATE_ALPHA);
+            $firstName = filter_input(INPUT_POST, 'fName', ctype_alpha);
 
             if($firstName == ''){
 
