@@ -50,11 +50,17 @@
 
             if($firstName == ''){
 
-                echo 'Make sure your first name is a real name!'
+                echo 'Make sure your first name is a real name!';
 
             }
 
             $lastName = filter_input(INPUT_POST, 'lName');
+
+            if($lastName == ''){
+
+                echo 'Make sure your last name is a real name!';
+
+            }
 
             echo 'Full Name = ', $firstName, ' ', $lastName;
 
