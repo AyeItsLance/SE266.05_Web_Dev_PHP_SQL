@@ -31,6 +31,8 @@
 
         <input type='text' name='fName' placeholder='First Name'/>
 
+        <input type='text' name='lName' placeholder='Last Name'/>
+
         <input type='submit' name='submitBtn' />
 
     </form>
@@ -42,9 +44,11 @@
 
             echo '<hr/> Form Submited <br/>';
 
-            $value = filter_input(INPUT_POST, 'fName');
+            $firstName = filter_input(INPUT_POST, 'fName');
 
-            echo 'First Name =', $value;
+            $lastName = filter_input(INPUT_POST, 'lName');
+
+            echo 'Full Name = ', $firstName, ' ', $lastName;
 
         } else{
             echo '<hr/>Loading information';
