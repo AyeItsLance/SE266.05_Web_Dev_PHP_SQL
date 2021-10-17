@@ -9,6 +9,7 @@
 <body>
 
     <?php
+        //setting up some functions for later use
         function age ($bdate) {
             $date = new DateTime($bdate);
             $now = new DateTime();
@@ -34,8 +35,8 @@
         <input type='text' name='lName' placeholder='Last Name'/>
 
         <br>
-
         <br>
+
         <label for='married'>Are you Married?</label><br>
 
         <input type='radio' name='marriedYes'>
@@ -47,13 +48,16 @@
         <label for ='mNo'>No</label>
         
         <br>
+        <br>
 
         <input type='submit' name='submitBtn' />
 
     </form>
 
 
-    <?php
+    <?php   
+
+        //first we will be setting up the first and last names
 
         if(isset($_POST['submitBtn'])) {
 
@@ -74,6 +78,23 @@
                 echo 'Make sure your last name is a real name!';
 
             }
+
+
+            //now on to marriage
+
+
+            $marriedYes = filter_input(INPUT_POST, 'marriedYes')
+
+            
+
+            $marriedNo = filter_input(INPUT_POST, 'marriedNo')
+
+
+
+
+
+
+            //displaying my data along with the else statement
 
             echo 'Full Name = ', $firstName, ' ', $lastName;
 
