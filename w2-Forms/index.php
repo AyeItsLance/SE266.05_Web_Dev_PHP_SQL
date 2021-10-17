@@ -83,7 +83,7 @@
             //now on to marriage
 
 
-            $marriedYes = filter_input(INPUT_POST, 'marriedYes')
+            $marriedYes = filter_input(INPUT_POST, 'marriedYes');
 
             if($marriedYes == ''){
 
@@ -93,7 +93,7 @@
 
             
 
-            $marriedNo = filter_input(INPUT_POST, 'marriedNo')
+            $marriedNo = filter_input(INPUT_POST, 'marriedNo');
 
             if($marriedNo == ''){
 
