@@ -161,7 +161,7 @@
 
             }
 
-            $total1 = bmiNumber($number1, $number2);
+            $total1 = bmiHeight($number1, $number2);
 
             echo $total1;
 
