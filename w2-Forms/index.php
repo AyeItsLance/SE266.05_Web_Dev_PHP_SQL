@@ -24,7 +24,21 @@
             return false;
             }
         }
-        if(isset($_POST['submitBtn'])){
+
+    ?>
+
+    <for action='index.php' method='post'>
+
+        <input type='text' name='fName' placeholder='First Name'/>
+
+        <input type='submit' name='submitBtn' />
+
+    </form>
+
+
+    <?php
+
+        if(isset($_POST['submitBtn'])) {
 
             echo 'Form Submited <hr/>';
 
@@ -37,18 +51,12 @@
         }
 
 
+
+
+
+
     ?>
-
-    <for action='index.php' method='post'>
-
-        <input type='text' name='fName' />
-
-        <input type='submit' name='submitBtn' />
-
-    </form>
-
-
-  
+    
     
 </body>
 </html>
