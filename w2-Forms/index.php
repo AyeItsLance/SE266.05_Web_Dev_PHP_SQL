@@ -46,6 +46,8 @@
 
             echo $value;
 
+        } else{
+            echo 'Loading information';
         }
 
 
