@@ -24,6 +24,18 @@
             return false;
             }
         }
+        if(isset($_POST['submitBtn'])){
+
+            echo 'Form Submited <hr/>';
+
+            $value = filter_input(INPUT_POST, 'fName');
+
+            echo $value;
+
+        } else{
+            echo '<hr/>Loading information';
+        }
+
 
     ?>
 
@@ -36,27 +48,7 @@
     </form>
 
 
-    <?php
-
-        if(isset($_POST['submitBtn'])){
-
-            echo 'Form Submited <hr/>';
-
-            $value = filter_input(INPUT_POST, 'fName');
-
-            echo $value;
-
-        } else{
-            echo 'Loading information';
-        }
-
-
-
-
-
-
-    ?>
-    
+  
     
 </body>
 </html>
