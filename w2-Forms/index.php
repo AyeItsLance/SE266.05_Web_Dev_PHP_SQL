@@ -161,9 +161,9 @@
 
             }
 
-            $total = bmiNumber($number1, $number2);
+            $total1 = bmiNumber($number1, $number2);
 
-            echo $total;
+            echo $total1;
 
 
            
