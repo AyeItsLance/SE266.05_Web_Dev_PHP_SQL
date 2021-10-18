@@ -165,37 +165,38 @@
 
             $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT);     //my number one is height in feet
 
-            if($number1 == ''){
-
-                echo 'Make sure your heigh is a real number!<br>';
-
-            }
-
             $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT);           //my number 2 is height in inches
         
-            if($number2 == ''){
-
-                echo 'Make sure your heigh is a real number!<br>';
-
-            }
 
             $number3 = filter_input(INPUT_POST, 'weight', FILTER_VALIDATE_FLOAT);           //my number 3 is my weight
 
-            if($number3 == ''){
 
-                echo 'Make sure your weight is a real number!<br>';
+            if($number1 == '' or $number2 == '' or $number3 == ''){
+
+                echo 'Make sure your height and weight are real numbers!<br>';
 
             }
 
+            else
+            {
 
-            $height = bmiHeight($number1, $number2);        //my function does all my math for me and stores my height in $height
+                $height = bmiHeight($number1, $number2);        //my function does all my math for me and stores my height in $height
 
-            $weight = bmiWeight($number3);      //function stores the after weight in $weight
+                $weight = bmiWeight($number3);      //function stores the after weight in $weight
+                
+
+                $totalBMI = $weight / ($height * $height);      //after grabbing my total bmi I rounded it using the round function
+
+                $roundedBMI = round($totalBMI,1);       //easier way to do? ask prof
+
+                
+            }
+
+            
             
 
-            $totalBMI = $weight / ($height * $height);      //after grabbing my total bmi I rounded it using the round function
 
-            $roundedBMI = round($totalBMI,1);       //easier way to do? ask prof
+
 
 
             
