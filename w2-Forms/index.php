@@ -121,12 +121,12 @@
 
                 echo 'Make sure your first name is a real name!<br>';       //making sure my first name has a value
 
-                $error = 1;
+                $error = 1;     //what these errors are doing is storing the value this is imporant later
 
             } 
             else{
 
-                $error = 0;
+                $error = 0; //what these errors are doing is storing the value this is imporant later
             }
 
             $lastName = filter_input(INPUT_POST, 'lName');      //grabbing my last name and storing it
@@ -185,7 +185,7 @@
             
 
 
-            $age = age($age);
+            $age = age($age);       //using the age function to find the users age in years
 
 
 
@@ -235,7 +235,7 @@
 
            
 
-            if($error == 0)
+            if($error == 0)     //at the end if my error is 0 that means no errors occured throughout my program and im all set to continue as usal
             {
 
                 //displaying my data along with the else statement
@@ -282,7 +282,7 @@
 
             }
             else
-            {
+            {       //if error equals anything else this means that something happened along the way and I need to go back and correct
 
                 echo 'Please fix your errors';
             }
