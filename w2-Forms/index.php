@@ -121,12 +121,12 @@
 
                 echo 'Make sure your first name is a real name!<br>';       //making sure my first name has a value
 
-                $error = 1
+                $error = 1;
 
             } 
             else{
 
-                $error = 0
+                $error = 0;
             }
 
             $lastName = filter_input(INPUT_POST, 'lName');      //grabbing my last name and storing it
