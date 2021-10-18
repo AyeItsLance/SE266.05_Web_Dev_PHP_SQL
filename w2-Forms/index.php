@@ -107,6 +107,8 @@
 
     <?php   
 
+        $error = 0; //creating a error var
+
         //first we will be setting up the first and last names
 
         if(isset($_POST['submitBtn'])) {        //all of my code will activate once my submit btn is pressed
@@ -119,6 +121,11 @@
 
                 echo 'Make sure your first name is a real name!<br>';       //making sure my first name has a value
 
+                $error = 1
+
+            } else{
+
+                $error = 0
             }
 
             $lastName = filter_input(INPUT_POST, 'lName');      //grabbing my last name and storing it
@@ -127,6 +134,11 @@
 
                 echo 'Make sure your last name is a real name!<br>';        //making sure my last name has a value
 
+                $error = 1;
+
+            } else{
+
+                $error = 0;
             }
 
             //after grabbing my first and last names fields I store it into Full name which is at the bottom
@@ -143,6 +155,11 @@
 
                 echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
+                $error = 1;
+
+            } else{
+
+                $error = 0;
             }
 
 
@@ -175,19 +192,14 @@
 
                 echo 'Make sure your height and weight are real numbers!<br>';
 
+                $error = 0
+
             }
 
             else
             {
 
-                $height = bmiHeight($number1, $number2);        //my function does all my math for me and stores my height in $height
-
-                $weight = bmiWeight($number3);      //function stores the after weight in $weight
-                
-
-                $totalBMI = $weight / ($height * $height);      //after grabbing my total bmi I rounded it using the round function
-
-                $roundedBMI = round($totalBMI,1);       //easier way to do? ask prof
+                $error = 1
 
                 
             }
@@ -208,15 +220,26 @@
 
 
 
+            if($error == 0)
+            {
+
+                 //displaying my data along with the else statement
+
+                echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
+
+                echo 'Age: ', $age, '<br>';
+
+                echo 'BMI: ', $roundedBMI, '<br>';
 
 
-            //displaying my data along with the else statement
+            }
+            else
+            {
 
-            echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
+                echo 'Please fix your errors';
+            }
 
-            echo 'Age: ', $age, '<br>';
-
-            echo 'BMI: ', $roundedBMI, '<br>';
+           
 
         } else{
             echo '<hr/>Loading information';
