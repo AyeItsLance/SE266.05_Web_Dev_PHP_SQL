@@ -176,6 +176,9 @@
 
                 $error = 1;
 
+
+            }
+
             elseif($marriedNo == ''{
 
                 $error = 1;
