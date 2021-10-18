@@ -125,7 +125,11 @@
 
     <?php   
 
-        $error = 0; //creating a error var
+        $error1 = 0; //creating a error var
+        $error2 = 0; //creating a error var
+        $error3 = 0; //creating a error var
+        $error4 = 0; //creating a error var
+        $error5 = 0; //creating a error var
 
         //first we will be setting up the first and last names
 
@@ -139,12 +143,12 @@
 
                 echo 'Make sure your first name is a real name!<br>';       //making sure my first name has a value
 
-                $error = 1;     //what these errors are doing is storing the value this is imporant later
+                $error1 = 1;     //what these errors are doing is storing the value this is imporant later
 
             } 
             else{
 
-                $error = 0; //what these errors are doing is storing the value this is imporant later
+                $error1 = 0; //what these errors are doing is storing the value this is imporant later
             }
 
             $lastName = filter_input(INPUT_POST, 'lName');      //grabbing my last name and storing it
@@ -153,11 +157,11 @@
 
                 echo 'Make sure your last name is a real name!<br>';        //making sure my last name has a value
 
-                $error = 1;
+                $error2 = 1;
 
             } else{
 
-                $error = 0;
+                $error2 = 0;
             }
 
             //after grabbing my first and last names fields I store it into Full name which is at the bottom
@@ -174,13 +178,13 @@
 
                 echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
-                $error = 1;
+                $error3 = 1;
 
                 
 
             } else{
 
-                $error = 0;
+                $error3 = 0;
             }
 
 
@@ -195,10 +199,10 @@
             {
                 echo 'Please select an age! <br>';
 
-                $error = 1;
+                $error4 = 1;
             } else{
 
-                $error = 0;
+                $error4 = 0;
             }
 
 
@@ -224,7 +228,7 @@
 
                 echo 'Make sure your height and weight are real numbers!<br>';
 
-                $error = 1;
+                $error5 = 1;
 
             }
 
@@ -234,7 +238,7 @@
         
     
     
-                $error = 0;
+                $error5 = 0;
 
                 
             }
@@ -255,7 +259,7 @@
 
            
 
-            if($error == 0)     //at the end if my error is 0 that means no errors occured throughout my program and im all set to continue as usal
+            if($error1 == 0 and $error2 == 0 and $error3 == 0 and $error4 == 0 and $error5 == 0)     //at the end if my error is 0 that means no errors occured throughout my program and im all set to continue as usal
             {
 
                 //displaying my data along with the else statement
