@@ -129,7 +129,7 @@
         $error2 = 0; //creating a error var
         $error3 = 0; //creating a error var
         $error4 = 0; //creating a error var
-        $error5 = 0; //creating a error var
+        $error5 = 0; //creating a error var         all of these error vars are for different areas which will force a user to enter everything in before the information at the end displays
 
         //first we will be setting up the first and last names
 
