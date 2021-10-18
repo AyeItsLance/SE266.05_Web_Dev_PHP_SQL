@@ -7,6 +7,8 @@
     <title>Lance's PHP</title>
 </head>
 <body>
+
+<!--Some style was inspired by Henry's site-->
 <style>
 
     .navbar {
@@ -92,6 +94,14 @@
             
             <li><a href='#'>Week 10</a></li>
             
+        </ul>
+
+        <h3>SQL Assignments</h3>
+
+        <ul>
+
+            <li><a href='#'>PENDING...</a></li>
+
         </ul>
 
 

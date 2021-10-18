@@ -7,6 +7,8 @@
     <title>About Me</title>
 </head>
 <body>
+
+<!--Some style was inspired by Henry's site-->
     <style>
 
         .navbar {
