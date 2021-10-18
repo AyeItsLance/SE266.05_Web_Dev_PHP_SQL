@@ -175,19 +175,18 @@
                 echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
                 $error = 1;
+        
 
-
-            }
-            elseif($marriedNo == ''){
+            } elseif($marriedNo =='')
+            {
 
                 $error = 1;
-
-
-            }
-
             } else{
 
                 $error = 0;
+
+
+
             }
 
 
