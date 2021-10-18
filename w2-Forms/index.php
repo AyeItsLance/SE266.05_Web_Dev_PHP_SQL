@@ -91,7 +91,7 @@
         
         <br>
 
-        <input type='radio' name='marriedNo' value="Y"<?php if($marriedNo != '') echo 'Checked'; ?>>
+        <input type='radio' name='marriedNo' <?php if($marriedNo != '') echo 'Checked'; ?>>
         <label for ='mNo'>No</label>
         
         <br>
@@ -170,13 +170,18 @@
 
             $marriedNo = filter_input(INPUT_POST, 'marriedNo');     //storing the no value
 
-            if($marriedYes == '' and $marriedNo == ''){
+            if($marriedYes == ''){
 
                 echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
                 $error = 1;
 
-                
+            elseif($marriedNo == ''{
+
+                $error = 1;
+
+
+            }
 
             } else{
 
