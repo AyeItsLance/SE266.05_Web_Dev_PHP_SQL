@@ -171,6 +171,17 @@
             $age = filter_input(INPUT_POST, 'birthDate');
 
 
+            if($age == '')
+            {
+                echo 'Please select an age! <br>'
+
+                $error = 1;
+            } else{
+
+                $error = 0;
+            }
+
+
             
 
 
@@ -243,6 +254,18 @@
                 echo 'Age: ', $age, '<br>';
 
                 echo 'BMI: ', $roundedBMI, '<br>';
+
+                if($roundedBMI < 18.5)
+                {
+                    echo 'Class: UnderWeight'
+                }
+
+            
+
+                if($roundedBMI >= 30)
+                {
+                    echo 'Class: Obese'
+                }
 
 
             }
