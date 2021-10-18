@@ -173,7 +173,7 @@
 
             if($age == '')
             {
-                echo 'Please select an age! <br>'
+                echo 'Please select an age! <br>';
 
                 $error = 1;
             } else{
