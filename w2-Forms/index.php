@@ -91,7 +91,7 @@
         
         <br>
 
-        <input type='radio' name='marriedNo' <?php if($marriedNo != '') echo 'Checked'; ?>>
+        <input type='radio' name='marriedNo' value="Y"<?php if($marriedNo != '') echo 'Checked'; ?>>
         <label for ='mNo'>No</label>
         
         <br>
