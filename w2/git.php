@@ -59,6 +59,14 @@
 
     <main>
 
+        <h1>Helpful Github resources</h1>
+
+        <li><a href='https://support.github.com/'>Github's Main Website</a></li>
+
+        <li><a href='https://docs.github.com/en/github/'>Github Docs</a></li>
+
+        <li><a href='https://www.reddit.com/r/github/'>Reddit</a></li>
+
         
     </main>
 
@@ -72,6 +80,7 @@
         $mod_date=date("F d Y h:i:s A", filemtime($file));
         echo "File last updated $mod_date ";
         //date.timezone = "Europe/Athens"
+        //my footer was gotten from the help of Henry!
         ?>
     </footer>
     

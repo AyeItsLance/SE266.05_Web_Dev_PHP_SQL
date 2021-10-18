@@ -56,6 +56,20 @@
         <a href="about.php"><strong>About Me</strong></a>
     </header>
 
+
+    <main>
+
+        <h1>Helpful PHP Resources</h1>
+
+        <li><a href='https://www.php.net/'>PHP's Main Website</a></li>
+
+        <li><a href='https://www.phphelp.com/'>Basic PHP Help</a></li>
+
+        <li><a href='https://www.reddit.com/r/PHPhelp/'>Reddit</a></li>
+
+
+    </main>
+
     <footer>
 
         <hr>
@@ -66,6 +80,8 @@
         $mod_date=date("F d Y h:i:s A", filemtime($file));
         echo "File last updated $mod_date ";
         //date.timezone = "Europe/Athens"
+
+        //my footer was gotten from the help of Henry!
         ?>
 
     </footer>
