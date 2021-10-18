@@ -86,7 +86,7 @@
 
         <label for='married'><strong>Married?</strong></label><br>
 
-        <input type='radio' name='marriedYes'>
+        <input type='radio' name='marriedYes'<?php if($marriedYes != '') echo 'Checked'; ?> >
         <label for ='mYes'>Yes</label>
         
         <br>
