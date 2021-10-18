@@ -262,17 +262,17 @@
                     echo 'Class: Under Weight';
                 }
 
-                if($roundedBMI <= 18.5 and <= 24.9)
+                elseif($roundedBMI <= 18.5 and $roundedBMI <= 24.9)
                 {
                     echo 'Class: Normal Weight';
                 }
 
-                if($roundedBMI <= 25.0 and <=29.9)
+                elseif($roundedBMI <= 25.0 and $roundedBMI <=29.9)
                 {
                     echo 'Class: Over Weight';
                 }
 
-                if($roundedBMI >= 30)
+                elseif($roundedBMI >= 30)
                 {
                     echo 'Class: Obese';
                 }
