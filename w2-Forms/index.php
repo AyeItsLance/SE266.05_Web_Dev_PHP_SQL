@@ -50,6 +50,8 @@
 
         }
 
+
+        $firstName = filter_input(INPUT_POST, 'fName');    
     ?>
 
     <h1>Please Sign This Form</h1>
