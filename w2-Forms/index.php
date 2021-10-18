@@ -219,7 +219,7 @@
     
 
 
-
+            echo $error
 
             if($error == 0)
             {
