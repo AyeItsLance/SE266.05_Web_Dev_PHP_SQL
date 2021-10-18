@@ -170,23 +170,17 @@
 
             $marriedNo = filter_input(INPUT_POST, 'marriedNo');     //storing the no value
 
-            if($marriedYes == ''){
+            if($marriedYes == '' and $marriedNo == ''){
 
                 echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
                 $error = 1;
-        
 
-            } elseif($marriedNo =='')
-            {
+                
 
-                $error = 1;
             } else{
 
                 $error = 0;
-
-
-
             }
 
 

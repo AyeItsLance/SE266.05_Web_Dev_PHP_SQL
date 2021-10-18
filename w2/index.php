@@ -74,7 +74,7 @@
             
             <li><a href='https://se266-php-lespinasse.herokuapp.com/w1_5/'>Week 1 FizzBuzz</a></li>
 
-            <li><a href='#'>Week 2 Paitent Form</a></li>
+            <li><a href='https://se266-php-lespinasse.herokuapp.com/w2-Forms/'>Week 2 Paitent Form</a></li>
                 
             <li><a href='#'>Week 3</a></li>
             
