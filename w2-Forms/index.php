@@ -176,6 +176,8 @@
 
                 $error = 1;
 
+                echo $error
+
             } else{
 
                 $error = 0;
