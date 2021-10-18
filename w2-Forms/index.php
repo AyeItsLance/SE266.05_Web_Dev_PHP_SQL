@@ -255,17 +255,29 @@
 
                 echo 'BMI: ', $roundedBMI, '<br>';
 
+                //creating my class system
+
                 if($roundedBMI < 18.5)
                 {
-                    echo 'Class: UnderWeight'
+                    echo 'Class: Under Weight';
                 }
 
-            
+                if($roundedBMI <= 18.5 and <= 24.9)
+                {
+                    echo 'Class: Normal Weight';
+                }
+
+                if($roundedBMI <= 25.0 and <=29.9)
+                {
+                    echo 'Class: Over Weight';
+                }
 
                 if($roundedBMI >= 30)
                 {
-                    echo 'Class: Obese'
+                    echo 'Class: Obese';
                 }
+
+                //end of class system
 
 
             }
