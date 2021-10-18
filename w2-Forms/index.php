@@ -178,8 +178,7 @@
 
 
             }
-
-            elseif($marriedNo == ''{
+            elseif($marriedNo == ''){
 
                 $error = 1;
 
