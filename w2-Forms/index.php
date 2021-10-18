@@ -123,7 +123,8 @@
 
                 $error = 1
 
-            } else{
+            } 
+            else{
 
                 $error = 0
             }
