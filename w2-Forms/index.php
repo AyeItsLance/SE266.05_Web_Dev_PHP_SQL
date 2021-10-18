@@ -213,9 +213,9 @@
 
             echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
 
-            echo 'Age: ', $age;
+            echo 'Age: ', $age, '<br>';
 
-            echo 'BMI: ', $roundedBMI;
+            echo 'BMI: ', $roundedBMI, '<br>';
 
         } else{
             echo '<hr/>Loading information';
