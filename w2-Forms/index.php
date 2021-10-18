@@ -58,7 +58,7 @@
 
     <form action='index.php' method='post'>
         <label><strong>First Name</strong></label>
-        <input type='text' name='fName' placeholder='First Name' value="<?= $first_Name($firstName)?>" />
+        <input type='text' name='fName' placeholder='First Name' value="<?php echo $firstName; ?>" />
 
         <label><strong>Last Name</strong></label>
         <input type='text' name='lName' placeholder='Last Name'/>
