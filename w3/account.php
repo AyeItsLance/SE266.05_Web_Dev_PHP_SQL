@@ -3,25 +3,27 @@
         protected $accountId, $balance, $startDate;
         
         public function __construct ($id, $b, $sd) {
-           // write code here
+           $this->accountId = $id;
+           $this->balance = $b;
+           $this->startDate = $startDate;
         }
         public function deposit ($amount) {
-            // write code here
+            $this->amount = $a;
         }
 
         abstract public function withdrawal($amount);
         // this is an abstract method. This method must be defined in all classes
         // that inherit from this class
         public function getStartDate() {
-            // write code here
+            return $this->startDate;
         }
 
         public function getBalance() {
-            // write code here
+            return $this->balance;       //returning my balance
         }
 
         public function getAccountId() {
-            // write code here
+            return $this->accountId;       //returning my accountID
         }
 
         protected function getAccountDetails() {
