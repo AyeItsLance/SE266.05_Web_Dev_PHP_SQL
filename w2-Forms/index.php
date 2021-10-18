@@ -211,7 +211,7 @@
 
             //displaying my data along with the else statement
 
-            echo 'Full Name: ', $firstName, ' ', $lastName;
+            echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
 
             echo 'Age: ', $age;
 
