@@ -91,7 +91,7 @@
         
         <br>
 
-        <input type='radio' name='marriedNo'>
+        <input type='radio' name='marriedNo' <?php if($marriedNo != '') echo 'Checked'; ?>>
         <label for ='mNo'>No</label>
         
         <br>
@@ -139,7 +139,7 @@
 
                 echo 'Make sure your first name is a real name!<br>';       //making sure my first name has a value
 
-                $error + 1;     //what these errors are doing is storing the value this is imporant later
+                $error = 1;     //what these errors are doing is storing the value this is imporant later
 
             } 
             else{
@@ -153,7 +153,7 @@
 
                 echo 'Make sure your last name is a real name!<br>';        //making sure my last name has a value
 
-                $error + 1;
+                $error = 1;
 
             } else{
 
@@ -174,7 +174,7 @@
 
                 echo 'Make sure you select your mariage status! <br>';      //if neither yes or no are filled out will print error
 
-                $error + 1;
+                $error = 1;
 
                 
 
@@ -195,7 +195,7 @@
             {
                 echo 'Please select an age! <br>';
 
-                $error + 1;
+                $error = 1;
             } else{
 
                 $error = 0;
@@ -224,7 +224,7 @@
 
                 echo 'Make sure your height and weight are real numbers!<br>';
 
-                $error + 1;
+                $error = 1;
 
             }
 
