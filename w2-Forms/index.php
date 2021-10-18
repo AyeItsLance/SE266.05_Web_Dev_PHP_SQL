@@ -189,7 +189,7 @@
 
             $totalBMI = $weight / ($height * $height);
 
-            $roundedBMI = round($totalBMI,2);
+            $roundedBMI = round($totalBMI,1);
 
 
             echo $roundedBMI;
