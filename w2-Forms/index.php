@@ -86,12 +86,12 @@
 
         <label for='married'><strong>Married?</strong></label><br>
 
-        <input type='radio' name='marriedYes' value=<?php echo $marriedYes; ?>"">
+        <input type='radio' name='marriedYes'>
         <label for ='mYes'>Yes</label>
         
         <br>
 
-        <input type='radio' name='marriedNo' value="<?php echo $marriedNo; ?>">
+        <input type='radio' name='marriedNo'>
         <label for ='mNo'>No</label>
         
         <br>
