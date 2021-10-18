@@ -51,7 +51,23 @@
         }
 
 
-        $firstName = filter_input(INPUT_POST, 'fName');    
+        $firstName = filter_input(INPUT_POST, 'fName');         //having these up top to force the program to stick after entering it in
+
+        $lastName = filter_input(INPUT_POST, 'lName');
+
+        $marriedYes = filter_input(INPUT_POST, 'marriedYes');       
+
+        $marriedNo = filter_input(INPUT_POST, 'marriedNo');     
+
+        $age = filter_input(INPUT_POST, 'birthDate');
+
+        $number1 = filter_input(INPUT_POST, 'feet', FILTER_VALIDATE_FLOAT);    
+
+        $number2 = filter_input(INPUT_POST, 'inches', FILTER_VALIDATE_FLOAT);           
+    
+
+        $number3 = filter_input(INPUT_POST, 'weight', FILTER_VALIDATE_FLOAT);           
+
     ?>
 
     <h1>Please Sign This Form</h1>
@@ -63,38 +79,38 @@
         <input type='text' name='fName' placeholder='First Name' value="<?php echo $firstName; ?>" />
 
         <label><strong>Last Name</strong></label>
-        <input type='text' name='lName' placeholder='Last Name'/>
+        <input type='text' name='lName' placeholder='Last Name' value="<?php echo $lastName; ?>"/>
 
         <br>
         <br>
 
         <label for='married'><strong>Married?</strong></label><br>
 
-        <input type='radio' name='marriedYes'>
+        <input type='radio' name='marriedYes' value=<?php echo $marriedYes; ?>"">
         <label for ='mYes'>Yes</label>
         
         <br>
 
-        <input type='radio' name='marriedNo'>
+        <input type='radio' name='marriedNo' value="<?php echo $marriedNo; ?>">
         <label for ='mNo'>No</label>
         
         <br>
         <br>
 
         <label><strong>Date of Birth</strong></label>
-        <input type='date' name='birthDate' />
+        <input type='date' name='birthDate' value="<?php echo $age; ?>" />
 
         <br>
 
         <label><strong>Height</strong></label>
-        <input type='text' name='feet' placeholder='Feet'/>
-        <input type='text' name='inches' placeholder='Inches'/>
+        <input type='text' name='feet' placeholder='Feet' value="<?php echo $number1; ?>"/>
+        <input type='text' name='inches' placeholder='Inches' value="<?php echo $number2; ?>"/>
 
 
         <br>
 
         <label><strong>Weight in LBS</strong></label>
-        <input type='text' name='weight' placeholder='Weight'/>
+        <input type='text' name='weight' placeholder='Weight' value="<?php echo $number3; ?>"/>
 
 
 
