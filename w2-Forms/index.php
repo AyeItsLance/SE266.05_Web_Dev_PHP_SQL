@@ -193,14 +193,25 @@
 
                 echo 'Make sure your height and weight are real numbers!<br>';
 
-                $error = 0;
+                $error = 1;
 
             }
 
             else
             {
 
-                $error = 1;
+                
+                $height = bmiHeight($number1, $number2);        //my function does all my math for me and stores my height in $height
+
+                $weight = bmiWeight($number3);      //function stores the after weight in $weight
+                
+    
+                $totalBMI = $weight / ($height * $height);      //after grabbing my total bmi I rounded it using the round function
+    
+                $roundedBMI = round($totalBMI,1);       //easier way to do? ask prof
+    
+    
+                $error = 0;
 
                 
             }
