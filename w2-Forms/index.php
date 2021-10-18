@@ -192,7 +192,7 @@
             $roundedBMI = round($totalBMI,2);
 
 
-            echo $roundedBMI
+            echo $roundedBMI;
 
            
 
