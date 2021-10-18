@@ -176,7 +176,7 @@
 
                 $error = 1;
 
-                echo $error;
+                
 
             } else{
 
