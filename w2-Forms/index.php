@@ -147,10 +147,16 @@
 
 
             //my set up for age
+
+
+
+            $age = filter_input(INPUT_POST, 'birthDate');
+
+
             
 
 
-
+            $age = age($age);
 
 
 
@@ -182,17 +188,17 @@
             }
 
 
-            $height = bmiHeight($number1, $number2);
+            $height = bmiHeight($number1, $number2);        //my function does all my math for me and stores my height in $height
 
-            $weight = bmiWeight($number3);
+            $weight = bmiWeight($number3);      //function stores the after weight in $weight
             
 
-            $totalBMI = $weight / ($height * $height);
+            $totalBMI = $weight / ($height * $height);      //after grabbing my total bmi I rounded it using the round function
 
-            $roundedBMI = round($totalBMI,1);
+            $roundedBMI = round($totalBMI,1);       //easier way to do? ask prof
 
 
-            echo $roundedBMI;
+            
 
            
 
@@ -205,7 +211,11 @@
 
             //displaying my data along with the else statement
 
-            echo 'Full Name = ', $firstName, ' ', $lastName;
+            echo 'Full Name: ', $firstName, ' ', $lastName;
+
+            echo 'Age: ', $age;
+
+            echo 'BMI: ', $roundedBMI;
 
         } else{
             echo '<hr/>Loading information';
