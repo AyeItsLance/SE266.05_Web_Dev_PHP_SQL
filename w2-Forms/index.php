@@ -193,14 +193,14 @@
 
                 echo 'Make sure your height and weight are real numbers!<br>';
 
-                $error = 0
+                $error = 0;
 
             }
 
             else
             {
 
-                $error = 1
+                $error = 1;
 
                 
             }
