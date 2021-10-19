@@ -1,5 +1,6 @@
-
 <?php
+    require 'account.php';
+
    if (isset ($_POST['withdrawChecking'])) {
     echo "I pressed the checking withdrawal button";
 } else if (isset ($_POST['depositChecking'])) {

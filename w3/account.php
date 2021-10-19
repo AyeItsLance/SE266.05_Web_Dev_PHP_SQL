@@ -56,6 +56,10 @@
         }
 
         public function getAccountDetails() {
+            $str = "<h2>Savings Account</h2>";
+            $str .= parent::getAccountDetails();
+            
+            return $str;
            // look at how it's defined in other class. You should be able to figure this out ...
         }
     }
