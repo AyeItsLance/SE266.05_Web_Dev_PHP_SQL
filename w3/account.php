@@ -30,10 +30,10 @@
             $str = getAccountId();
 
     
-            $str += getBalance();
+            $str .= getBalance();
             
 
-            $str += $accountId;
+            
             
             return $str;
         }
