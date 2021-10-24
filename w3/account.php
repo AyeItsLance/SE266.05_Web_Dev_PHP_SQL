@@ -97,6 +97,6 @@
     
     echo $checking->getAccountDetails();
     echo $savings->getAccountDetails();
-    echo $checking->getStartDate();
+    
     
 ?>

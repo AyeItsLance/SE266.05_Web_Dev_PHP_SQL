@@ -75,10 +75,19 @@
               
                     
                     <div class="accountInner">
+                        <h2>Checking Account</h2>
+
+                        <?php
+
+                            echo $checking->getAccountDetails();
+                           
+
+                        ?>
                         <input type="text" name="checkingWithdrawAmount" value="" />
                         <input type="submit" name="withdrawChecking" value="Withdraw" />
                     </div>
                     <div class="accountInner">
+
                         <input type="text" name="checkingDepositAmount" value="" />
                         <input type="submit" name="depositChecking" value="Deposit" /><br />
                     </div>
@@ -87,7 +96,13 @@
 
             <div class="account">
                
-                    
+                    <h2>Savings Account</h2>
+
+                    <?php
+
+                        echo $savings->getAccountDetails();
+
+                    ?>
                     <div class="accountInner">
                         <input type="text" name="savingsWithdrawAmount" value="" />
                         <input type="submit" name="withdrawSavings" value="Withdraw" />
