@@ -5,7 +5,7 @@
         public function __construct ($id, $b, $sd) {
            $this->accountId = $id;
            $this->balance = $b;
-           $this->startDate = $startDate;
+           $this->startDate = $sd;
         }
         public function deposit ($amount) {
             $this->amount = $a;
@@ -27,7 +27,7 @@
         }
 
         protected function getAccountDetails() {
-            $str += $balance;
+            $str += $b;
             
             return $str;
         }
