@@ -11,7 +11,7 @@
             $this->amount = $a;
         }
 
-        abstract public function withdrawal($amount);
+        abstract public function withdrawal($amount); 
         // this is an abstract method. This method must be defined in all classes
         // that inherit from this class
         public function getStartDate() {
@@ -27,7 +27,13 @@
         }
 
         protected function getAccountDetails() {
+            $str = $accountId;
+
+    
             $str += $b;
+            
+
+            $str += $accountId;
             
             return $str;
         }
@@ -37,7 +43,18 @@
         const OVERDRAW_LIMIT = -200;
 
         public function withdrawal($amount) {
-            // write code here. Return true if withdrawal goes through; false otherwise
+            $total = $b - $amount;
+            
+
+            return $total;
+        }
+
+        public function deposit($amount) {
+
+            $total = $b + $amount;
+            
+
+            return $total;
         }
 
         //freebie. I am giving you this code.
