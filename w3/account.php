@@ -41,7 +41,7 @@
         }
 
         protected function getAccountDetails() {
-          return $this->accountId . "<br>$" . $this->balance . "<br>" . $this->startDate;
+          return "ACCOUNT ID:" .$this->accountId . "<br> BALANCE: $" . $this->balance . "<br>START DATE:" . $this->startDate;
         }
     }
 
