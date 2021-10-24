@@ -80,6 +80,8 @@
                         <?php
 
                             echo $checking->getAccountDetails();
+
+                            echo '<br>';
                            
                         ?>
                         <input type="text" name="checkingWithdrawAmount" value="" />
