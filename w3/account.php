@@ -27,7 +27,7 @@
         }
 
         protected function getAccountDetails() {
-            // populate $str with the account details
+            $str += $balance;
             
             return $str;
         }
