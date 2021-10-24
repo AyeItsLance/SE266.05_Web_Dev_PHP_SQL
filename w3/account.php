@@ -11,6 +11,18 @@
             $this->amount = $a;
         }
 
+        public function setAccountID ($id) {
+            $this->account = $id;
+        }
+    
+        public function setBalance ($b) {
+            $this->balance = $b;
+        }
+
+        public function setStartDate ($sd) {
+            $this->startDate = $sd;
+        }
+
         abstract public function withdrawal($amount); 
         // this is an abstract method. This method must be defined in all classes
         // that inherit from this class
@@ -31,10 +43,10 @@
 
     
             $str .= getBalance();
-            
 
-            
-            
+
+            $str .= getStartDate();
+
             return $str;
         }
     }
