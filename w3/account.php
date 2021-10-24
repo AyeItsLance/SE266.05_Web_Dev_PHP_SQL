@@ -51,17 +51,33 @@
 
         public function withdrawal($amount) {
             $total = $this->balance  - $amount;
+
+            $this->balance = $total;
+
+            if($total <= -200)
+
+            {
+                $this->balance = -200;
+
+                echo '<br>You may not withdraw anymore! A fee will be mailed to you!';
+            }
             
 
-            return $total;
+            return $this->balance;
+
         }
 
         public function deposit($amount) {
 
             $total = $this->balance + $amount;
+
+          
+
+            $this->balance = $total;
+            
             
 
-            return $total;
+            return $this->balance;
         }
 
         //freebie. I am giving you this code.
@@ -76,7 +92,33 @@
     class SavingsAccount extends Account {
 
         public function withdrawal($amount) {
-            // write code here. Return true if withdrawal goes through; false otherwise
+            $total = $this->balance  - $amount;
+
+            $this->balance = $total;
+
+            if($total <= 0)
+
+            {
+                $this->balance = 0;
+
+                echo '<br>You may not withdraw anymore! Theres no money!';
+            }
+            
+
+            return $this->balance;
+        }
+
+        public function deposit($amount) {
+
+            $total = $this->balance + $amount;
+
+          
+
+            $this->balance = $total;
+            
+            
+
+            return $this->balance;
         }
 
         public function getAccountDetails() {
@@ -90,8 +132,7 @@
 
     
     $checking = new CheckingAccount ('C123', 1000, '12-20-2019');
-    $checking->withdrawal(200);
-    $checking->deposit(500);
+    
 
     $savings = new SavingsAccount('S123', 5000, '03-20-2020');
     

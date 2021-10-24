@@ -1,14 +1,34 @@
 <?php
-    require 'account.php';
+    require 'C:\xampp\htdocs\SE266.05_Web_Dev_PHP_SQL\w3\account.php';
 
    if (isset ($_POST['withdrawChecking'])) {
 
     echo "<br>I pressed the checking withdrawal button";
 
+    $number = filter_input(INPUT_POST, 'checkingWithdrawAmount', FILTER_VALIDATE_FLOAT);
+
+    $checking->withdrawal($number);
+
+    if($number == ''){
+
+        echo '<br>Make sure your enter in real numbers!<br>';
+
+    }
+
 
 } else if (isset ($_POST['depositChecking'])) {
 
     echo "<br>I pressed the checking deposit button";
+
+    $number = filter_input(INPUT_POST, 'checkingDepositAmount', FILTER_VALIDATE_FLOAT);
+
+    $checking->deposit($number);
+
+    if($number == ''){
+
+        echo '<br>Make sure your enter in real numbers!<br>';
+
+    }
 
 
 } else if (isset ($_POST['withdrawSavings'])) {
@@ -16,9 +36,29 @@
     echo "<br>I pressed the savings withdrawal button";
 
 
+    $number = filter_input(INPUT_POST, 'savingsWithdrawAmount', FILTER_VALIDATE_FLOAT);
+
+    $savings->withdrawal($number);
+
+    if($number == ''){
+
+        echo '<br>Make sure your enter in real numbers!<br>';
+
+    }
+
 } else if (isset ($_POST['depositSavings'])) {
 
     echo "<br>I pressed the savings deposit button";
+
+    $number = filter_input(INPUT_POST, 'savingsDepositAmount', FILTER_VALIDATE_FLOAT);
+
+    $savings->deposit($number);
+
+    if($number == ''){
+
+        echo '<br>Make sure your enter in real numbers!<br>';
+
+    }
 } 
      
 ?>
