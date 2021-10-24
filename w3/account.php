@@ -41,7 +41,8 @@
         }
 
         protected function getAccountDetails() {
-          return "ACCOUNT ID:" .$this->accountId . "<br> BALANCE: $" . $this->balance . "<br>START DATE:" . $this->startDate;
+          return "ACCOUNT ID:" .$this->accountId . "<br> BALANCE: $" . $this->balance . "<br>START DATE:
+          " . $this->startDate;
         }
     }
 
@@ -49,7 +50,7 @@
         const OVERDRAW_LIMIT = -200;
 
         public function withdrawal($amount) {
-            $total = $b - $amount;
+            $total = $this->balance  - $amount;
             
 
             return $total;
@@ -57,7 +58,7 @@
 
         public function deposit($amount) {
 
-            $total = $b + $amount;
+            $total = $this->balance + $amount;
             
 
             return $total;

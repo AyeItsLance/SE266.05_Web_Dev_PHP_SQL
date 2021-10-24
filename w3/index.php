@@ -3,22 +3,22 @@
 
    if (isset ($_POST['withdrawChecking'])) {
 
-    echo "I pressed the checking withdrawal button";
-    
+    echo "<br>I pressed the checking withdrawal button";
+
 
 } else if (isset ($_POST['depositChecking'])) {
 
-    echo "I pressed the checking deposit button";
+    echo "<br>I pressed the checking deposit button";
 
 
 } else if (isset ($_POST['withdrawSavings'])) {
 
-    echo "I pressed the savings withdrawal button";
+    echo "<br>I pressed the savings withdrawal button";
 
 
 } else if (isset ($_POST['depositSavings'])) {
 
-    echo "I pressed the savings deposit button";
+    echo "<br>I pressed the savings deposit button";
 } 
      
 ?>
