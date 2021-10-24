@@ -27,10 +27,10 @@
         }
 
         protected function getAccountDetails() {
-            $str = $accountId;
+            $str = getAccountId();
 
     
-            $str += $b;
+            $str += getBalance();
             
 
             $str += $accountId;
