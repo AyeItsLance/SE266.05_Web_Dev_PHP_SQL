@@ -12,7 +12,7 @@
         }
 
         public function setAccountID ($id) {
-            $this->account = $id;
+            $this->accountId = $id;
         }
     
         public function setBalance ($b) {
