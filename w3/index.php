@@ -81,7 +81,6 @@
 
                             echo $checking->getAccountDetails();
                            
-
                         ?>
                         <input type="text" name="checkingWithdrawAmount" value="" />
                         <input type="submit" name="withdrawChecking" value="Withdraw" />
