@@ -4,24 +4,20 @@
         
         public function __construct ($id, $b, $sd) {
            $this->accountId = $id;
-           $this->balance = $b;
+           $this->balance = $b;     //grabbing the protected variables
            $this->startDate = $sd;
         }
-        public function deposit ($amount) {
-            $total = $b + $amount;
-
-            return $total;
-        }
+     
 
         public function setAccountID ($id) {
-            $this->accountId = $id;
+            $this->accountId = $id;     //creating a function that sets our vars
         }
     
         public function setBalance ($b) {
-            $this->balance = $b;
+            $this->balance = $b;     //creating a function that sets our vars
         }
 
-        public function setStartDate ($sd) {
+        public function setStartDate ($sd) {     //creating a function that sets our vars
             $this->startDate = $sd;
         }
 
@@ -29,7 +25,7 @@
         // this is an abstract method. This method must be defined in all classes
         // that inherit from this class
         public function getStartDate() {
-            return $this->startDate;
+            return $this->startDate;        //returning my start date
         }
 
         public function getBalance() {
@@ -41,8 +37,9 @@
         }
 
         protected function getAccountDetails() {
+            
           return "ACCOUNT ID:" .$this->accountId . "<br> BALANCE: $" . $this->balance . "<br>START DATE:
-          " . $this->startDate;
+          " . $this->startDate;     //putting it all together so I can return my account status
         }
     }
 
@@ -54,20 +51,21 @@
 
             $this->balance = $total;
 
-            if($total <= -200)
+            if($total <= -200)      //making it so if my total goes over -200 then it will stop there and display text
 
             {
-                $this->balance = -200;
+                $this->balance = "<font color='red'>" .-200 . "<font color='black'>";
 
-                echo '<br>You may not withdraw anymore! A fee will be mailed to you!';
+                echo "<br><font color='red'>You may not withdraw anymore! A fee will be mailed to you!
+                <font color='black'>";
             }
             
 
-            return $this->balance;
+            return $this->balance;      //if if doesnt trigger return my balance
 
         }
 
-        public function deposit($amount) {
+        public function deposit($amount) {      //creating my deposit function
 
             $total = $this->balance + $amount;
 
@@ -92,6 +90,7 @@
     class SavingsAccount extends Account {
 
         public function withdrawal($amount) {
+            
             $total = $this->balance  - $amount;
 
             $this->balance = $total;

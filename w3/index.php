@@ -3,6 +3,8 @@
 
    if (isset ($_POST['withdrawChecking'])) {
 
+    
+
     echo "<br>I pressed the checking withdrawal button";
 
     $number = filter_input(INPUT_POST, 'checkingWithdrawAmount', FILTER_VALIDATE_FLOAT);
