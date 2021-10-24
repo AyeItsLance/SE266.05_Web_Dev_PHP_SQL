@@ -95,8 +95,7 @@
 
     $savings = new SavingsAccount('S123', 5000, '03-20-2020');
     
-    echo $checking->getAccountDetails();
-    echo $savings->getAccountDetails();
+   
     
     
 ?>

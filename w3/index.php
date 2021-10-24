@@ -75,7 +75,7 @@
               
                     
                     <div class="accountInner">
-                        <h2>Checking Account</h2>
+                        
 
                         <?php
 
@@ -96,7 +96,7 @@
 
             <div class="account">
                
-                    <h2>Savings Account</h2>
+                    
 
                     <?php
 
