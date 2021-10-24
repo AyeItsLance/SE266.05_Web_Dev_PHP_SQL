@@ -71,7 +71,7 @@
 
           
 
-            $this->balance = $total;
+            $this->balance = $total;        //once its all done return the new balance
             
             
 
@@ -93,7 +93,7 @@
             
             $total = $this->balance  - $amount;
 
-            $this->balance = $total;
+            $this->balance = $total;        //creating my withdraw function if balance hits 0 the number will not go into the negatives
 
             if($total <= 0)
 
@@ -113,7 +113,7 @@
 
           
 
-            $this->balance = $total;
+            $this->balance = $total;        //same as before deposit function
             
             
 
