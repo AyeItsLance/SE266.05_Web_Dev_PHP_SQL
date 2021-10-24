@@ -8,7 +8,9 @@
            $this->startDate = $sd;
         }
         public function deposit ($amount) {
-            $this->amount = $a;
+            $total = $b + $amount;
+
+            return $total;
         }
 
         public function setAccountID ($id) {
@@ -39,15 +41,7 @@
         }
 
         protected function getAccountDetails() {
-            $str = getAccountId();
-
-    
-            $str .= getBalance();
-
-
-            $str .= getStartDate();
-
-            return $str;
+          return $this->accountId . "<br>" . $this->balance . "" . $this->startDate
         }
     }
 
