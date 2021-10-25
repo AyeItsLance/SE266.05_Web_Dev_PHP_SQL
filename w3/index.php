@@ -1,5 +1,5 @@
 <?php
-    require 'C:\xampp\htdocs\SE266.05_Web_Dev_PHP_SQL\w3\account.php';
+    require 'account.php';
 
    if (isset ($_POST['withdrawChecking'])) {
 
