@@ -9,11 +9,11 @@
 
     $number = filter_input(INPUT_POST, 'checkingWithdrawAmount', FILTER_VALIDATE_FLOAT);
 
-    $checking->withdrawal($number);
+    $checking->withdrawal($number);     //if the number is a real number it will be stored into number var which will be sent to the checking withdraw function
 
     if($number == ''){
 
-        echo '<br>Make sure your enter in real numbers!<br>';
+        echo '<br>Make sure your enter in real numbers!<br>';       //error message
 
     }
 
@@ -24,9 +24,9 @@
 
     $number = filter_input(INPUT_POST, 'checkingDepositAmount', FILTER_VALIDATE_FLOAT);
 
-    $checking->deposit($number);
+    $checking->deposit($number);                 //if the number is a real number it will be stored into number var which will be sent to the checking deposit function
 
-    if($number == ''){
+    if($number == ''){      //error message
 
         echo '<br>Make sure your enter in real numbers!<br>';
 
@@ -38,13 +38,13 @@
     echo "<br>I pressed the savings withdrawal button";
 
 
-    $number = filter_input(INPUT_POST, 'savingsWithdrawAmount', FILTER_VALIDATE_FLOAT);
+    $number = filter_input(INPUT_POST, 'savingsWithdrawAmount', FILTER_VALIDATE_FLOAT);      //if the number is a real number it will be stored into number var which will be sent to the savoings withdraw function
 
     $savings->withdrawal($number);
 
     if($number == ''){
 
-        echo '<br>Make sure your enter in real numbers!<br>';
+        echo '<br>Make sure your enter in real numbers!<br>';       //error message
 
     }
 
@@ -54,11 +54,13 @@
 
     $number = filter_input(INPUT_POST, 'savingsDepositAmount', FILTER_VALIDATE_FLOAT);
 
-    $savings->deposit($number);
+    $savings->deposit($number);      //if the number is a real number it will be stored into number var which will be sent to the savings deposit function
 
     if($number == ''){
 
         echo '<br>Make sure your enter in real numbers!<br>';
+
+        //error message
 
     }
 } 
@@ -101,7 +103,7 @@
 </head>
 <body>
 
-    <form method="post">
+    <form method="post">        <!--This is my atm start which you gave us-->
        
         <input type="hidden" name="checkingAccountId" value="C123" />
         <input type="hidden" name="checkingDate" value="12-20-2019" />
@@ -121,7 +123,7 @@
 
                         <?php
 
-                            echo $checking->getAccountDetails();
+                            echo $checking->getAccountDetails();     //echoing my account details fopr checking account
 
                             echo '<br>';
                            
@@ -143,7 +145,7 @@
 
                     <?php
 
-                        echo $savings->getAccountDetails();
+                        echo $savings->getAccountDetails();     ///echoing my savings account detail
 
                     ?>
                     <div class="accountInner">
