@@ -1,3 +1,11 @@
+<?php
+
+    include __DIR__ .'/model_patient.php';
+
+    $patient = GetPatient();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +14,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+
+<style>
+
+body{
+
+    background-color: white;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+table{
+
+    width:80%;
+    border-collapse: collapse;
+}
+
+td{
+
+    text-align: center;
+    border-bottom:1px solid black;
+}
+
+h1{
+
+font-family: cursive;
+
+}
+
+
+thead{
+
+    text-align: center;
+
+    background-color: gray;
+
+    color: black;
+}
+
+
+</style>
 <body>
 
 <div class="container">
@@ -28,18 +78,45 @@
             <tbody>
            
             
-            <?php foreach ($teams as $row): ?>
+            <?php foreach ($patient as $row): ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['teamName']; ?></td>
-                    <td><?php echo $row['division']; ?></td>            
+                    <td><?php echo $row['patientFirstName']; ?></td>
+                    <td><?php echo $row['patientLastName']; ?></td>
+
+                    
+
+                    <td><?php echo $row['patientBirthDate']; ?></td>
+                    <td>
+
+                        <?php 
+                        
+                        
+                        if($row['patientMarried'] == 1) :?>
+
+                            <print>Yes</print>
+
+                        <?php else :?>
+
+                            <print>No</print>
+
+                        <?php endif;
+
+                        ?>
+
+                        
+                    
+                    
+                    
+                    </td>
+                    
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
         
         <br />
-        <a href="addPatient.php">Add Team</a>
+        <a href="addPatient.php">Add Patient</a>
     </div>
     </div>
     

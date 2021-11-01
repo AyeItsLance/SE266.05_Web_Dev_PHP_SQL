@@ -84,6 +84,10 @@
         <br>
         <input type='submit' name='submitBtn' />
 
+        <br>
+
+        <a href="index.php">Return to Patient List</a>
+
 
        
 
@@ -143,12 +147,12 @@
 
             if($marriedYes != '')
             {
-                $status = true;
+                $status = 1;
             }
 
             if($marriedNo != '')
             {
-                $status = false;
+                $status = 0;
             }
 
 
@@ -189,12 +193,6 @@
             
 
 
-            $age = age($age);       //using the age function to find the users age in years
-
-
-
-
-            //BMI calculator
 
 
            
@@ -209,21 +207,21 @@
 
                 //displaying my data along with the else statement
 
-            
+                $resluts = addPatient ($firstName, $lastName, $status, $age);    //calling my add patient function which will actually add my patient
 
                 echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
 
-                echo 'Age: ', $age, '<br>';
+                echo 'Date of Birth: ', $age, '<br>';
 
                 
                 if($status == false)
                 {
-                    echo 'Married: No';
+                    echo 'Married: No<br>';
                 }
                 
                 else{
 
-                    echo 'Married: Yes';
+                    echo 'Married: Yes<br>';
                 }
 
                 if (isPostRequest()) {

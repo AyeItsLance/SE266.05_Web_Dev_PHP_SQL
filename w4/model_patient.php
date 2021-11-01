@@ -1,21 +1,20 @@
 <?php
 
 
-include (__DIR__ . '/db.php');      //grabbing my db file
+include (__DIR__ . '/db.php'); //grabbing my db file
 
-funtion GetPaitent () {     //creating my function that grabs my paitents
-    global $db      //global database
+function GetPatient () {     //creating my function that grabs my paitents
+    global $db;    //global database
 
 
-    $results = [];
+    $results = [];      //creating my empty resuts array
 
     $stmt = $db->prepare("SELECT id, patientFirstName, patientLastName, patientMarried, patientBirthDate FROM patients ORDER BY patientLastName");      //this is my sql code that selects my paitent
 
 
-    if ( $stmt->execute() && $stmt->rowCount() > 0 {
+    if ( $stmt->execute() && $stmt->rowCount() > 0) {
+
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
 
 
     }        //this is me checking to make sure the code executes
@@ -34,7 +33,7 @@ function addPatient ($f, $l, $s, $a)  {
 
     $results = "Not addded";        //this will display if code doesnt work
 
-    $stmt = $db->prepare("INSERT INTO paitents SET patientFirstName = :firstname, paitentLastName = :lastname, patientMarried = :status, patientBirthDate = :age ")     //craeting my sql statement that will add data into the db
+    $stmt = $db->prepare("INSERT INTO patients SET patientFirstName = :firstname, patientLastName = :lastname, patientMarried = :status, patientBirthDate = :age ");     //craeting my sql statement that will add data into the db
 
     $binds = array(
         ":firstname" => $f,
