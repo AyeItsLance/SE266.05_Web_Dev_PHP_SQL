@@ -9,6 +9,9 @@
 <body>
 
     <?php
+
+        include __DIR__ . '/functions.php';
+        include __DIR__. '/model_patient.php';
         //setting up some functions for later use
         function age ($bdate) {
             $date = new DateTime($bdate);
