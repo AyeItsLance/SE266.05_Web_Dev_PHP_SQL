@@ -71,7 +71,7 @@ thead{
                     <th>ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Age</th>
+                    <th>Date of Birth</th>
                     <th>Married</th>
                 </tr>
             </thead>
