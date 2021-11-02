@@ -78,9 +78,9 @@
 
             <li><a href='https://se266-php-lespinasse.herokuapp.com/w2-Forms/'>Week 2 Paitent Form</a></li>
                 
-            <li><a href='#'>Week 3</a></li>
+            <li><a href='http://se266-php-lespinasse.herokuapp.com/w3/'>Week 3</a></li>
             
-            <li><a href='#'>Week 4</a></li>
+            <li><a href='https://se266-php-lespinasse.herokuapp.com/w4'>Week 4</a></li>
             
             <li><a href='#'>Week 5</a></li>
             
