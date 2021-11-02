@@ -2,7 +2,7 @@
 
     include __DIR__ .'/model_patient.php';
 
-    $patient = GetPatient();
+    $patient = GetPatient();        //running my get patient command
 
 
 ?>
@@ -71,7 +71,7 @@ thead{
                     <th>ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Date of Birth</th>
+                    <th>Date of Birth  YYYY/MM/DD</th>
                     <th>Married</th>
                 </tr>
             </thead>
@@ -90,6 +90,10 @@ thead{
                     <td>
 
                         <?php 
+
+                        //this if statement is so I can switch my boooleans 
+
+                        //meaning that if patientMarrieed field is an 1 itll print out Yes, and if its anything else will print no
                         
                         
                         if($row['patientMarried'] == 1) :?>

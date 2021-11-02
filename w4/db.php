@@ -1,6 +1,8 @@
 
 <?php
 
+//this is just database login information
+
 $ini = parse_ini_file( __DIR__ . '/dbconfig.ini');
 
 $db = new PDO(  "mysql:host=" . $ini['servername'] . 

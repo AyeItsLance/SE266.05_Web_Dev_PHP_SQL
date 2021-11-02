@@ -147,12 +147,12 @@
 
             if($marriedYes != '')
             {
-                $status = 1;
+                $status = 1;        //1 for true
             }
 
             if($marriedNo != '')
             {
-                $status = 0;
+                $status = 0;        //0 for false
             }
 
 
@@ -219,7 +219,7 @@
                     echo 'Married: No<br>';
                 }
                 
-                else{
+                else{       //status will come in later, this is what is stored and sent to the db if false will equal 0 and true will equal 1
 
                     echo 'Married: Yes<br>';
                 }

@@ -9,7 +9,7 @@ function GetPatient () {     //creating my function that grabs my paitents
 
     $results = [];      //creating my empty resuts array
 
-      //this is my sql code that selects my paitent
+    $stmt = $db->prepare("SELECT id, patientFirstName, patientLastName, patientMarried, patientBirthDate FROM patients ORDER BY patientLastName");      //this is my sql code that selects my paitent
 
 
     if ( $stmt->execute() && $stmt->rowCount() > 0) {
@@ -44,7 +44,7 @@ function addPatient ($f, $l, $s, $a)  {
 
 
     if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-        $results = "Patient Added";
+        $results = "Patient Added";     //if command works print out patient added
     }
 
 }
