@@ -2,7 +2,7 @@
 
     include __DIR__ .'/model_patient.php';
 
-    $patient = GetPatient();        //running my get patient command
+ //   $patient = GetPatient();        //running my get patient command
 
 
 ?>
