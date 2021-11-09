@@ -115,7 +115,7 @@ thead{
                     </td>
 
                     
-                    <td><a href="editPatient.php?action=update&patientId=<?= $row['id'] ?>">Edit</a></td> 
+                    <td><a href="editPatient.php?action=update&patientId=<?= $row['id'] ?>">Edit</a></td> <!--Adding link for edits-->
                     
                 </tr>
             <?php endforeach; ?>

@@ -157,7 +157,7 @@
 
             var_dump($id);
 
-            header('Location: index.php');
+            header('Location: index.php');      //creating my own button for delete once pressed the delete function runs
         }
 
 
@@ -293,7 +293,7 @@
             
                 $id = filter_input(INPUT_POST, 'patientId', FILTER_VALIDATE_INT);
     
-                $results = updatePatient($id, $firstName, $lastName, $status, $age);
+                $results = updatePatient($id, $firstName, $lastName, $status, $age);            //storing the update function into results
 
                 echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
 
@@ -318,7 +318,7 @@
                 echo "Paitent Updated";
 
 
-                header('Location: index.php');
+                header('Location: index.php');      //once the update function fully runs user gets sent back to main page
 
                
             
@@ -335,7 +335,7 @@
                 echo 'Please fix your errors';
 
 
-                header('Location: index.php');
+                header('Location: index.php');      //forcing user back to main page even for errors
 
                 
 
