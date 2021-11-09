@@ -57,5 +57,59 @@
 
         $stmt = $db->query("DELETE FROM schools");
 
-        return 0;
+        return 0;       //deleteing all schools functions
+    }
+
+
+    function getSchoolCount() {
+        global $db;
+
+        $stmt = $db->query("SELECT COUNT(*) AS schoolCount FROM schools");
+
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);          //my function for getting the school count 
+       return($results['schoolCount']);
+   
+    }
+
+    function getSchools ($name, $city, $state) {
+        global $db;     //my function for grabbing schools
+        
+        $binds = array();
+        $sql = "SELECT id, schoolName, schoolCity, schoolState FROM schools WHERE 0=0 ";
+        if ($name != "") {
+             $sql .= " AND schoolName LIKE :schoolName";
+             $binds['schoolName'] = '%'.$name.'%';
+        }
+       
+        if ($city != "") {
+            $sql .= " AND schoolCity LIKE :city";
+            $binds['city'] = '%'.$city.'%';
+        }
+        if ($state != "") {
+            $sql .= " AND schoolState LIKE :state";
+            $binds['state'] = '%'.$state.'%';
+        }
+        
+        $stmt = $db->prepare($sql);
+       
+        $results = array();
+        if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        return ($results);
+
+        function checkLogin ($userName, $password) {
+            global $db;
+            $stmt = $db->prepare("SELECT id FROM users WHERE userName =:userName AND userPassword = :password");
+        
+            $stmt->bindValue(':userName', $userName);
+            $stmt->bindValue(':password', sha1("school-salt".$password));
+            
+            $stmt->execute ();
+           
+            return( $stmt->rowCount() > 0);
+            
+        }
+        
     }
