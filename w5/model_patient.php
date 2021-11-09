@@ -52,7 +52,7 @@ function addPatient ($f, $l, $s, $a)  {
 
 //creating my update or edit patient
 
-function updatePatient($id, $firstname, $lastname, $status, $age){
+function updatePatient($id, $firstName, $lastName, $status, $age){
 
     global $db;
 
@@ -62,8 +62,8 @@ function updatePatient($id, $firstname, $lastname, $status, $age){
 
 
     $stmt->bindValue(':id', $id);
-    $stmt->bindValue(':firstname', $firstname);     //binding all my values
-    $stmt->bindValue(':lastname', $lastname);
+    $stmt->bindValue(':firstname', $firstName);     //binding all my values
+    $stmt->bindValue(':lastname', $lastName);
     $stmt->bindValue(':status', $status);
     $stmt->bindValue(':age', $age);
 

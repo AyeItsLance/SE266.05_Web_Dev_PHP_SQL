@@ -51,7 +51,12 @@
         $id = filter_input(INPUT_GET, 'patientId');
 
 
+
+
         $row = getPatients($id);
+
+        $id = filter_input(INPUT_GET, 'patientId', FILTER_VALIDATE_FLOAT);
+        
 
         $firstName = $row['patientFirstName'];
 
@@ -63,6 +68,17 @@
 
         
 
+    
+
+
+
+        
+
+
+        
+
+        
+
     ?>
 
     <h1>Please Sign This Form</h1>
@@ -71,18 +87,16 @@
 
     <form action='editPatient.php' method='post'>
 
-
-        <input type="text" name="action" value="<?= $action;?>">
-
-        <br>
-        <br>
+    
 
 
-        <label><strong>ID Number</strong></label>
-        <input type="text" name="teamId" value="<?= $id;?>">
+        
 
-        <br>
-        <br>
+
+        
+        <input type="hidden" name="patientId" value="<?= $id;?>">
+
+      
 
         <label><strong>First Name</strong></label>
         <input type='text' name='fName' placeholder='First Name' value="<?= $firstName; ?>" />
@@ -95,12 +109,12 @@
 
         <label for='married'><strong>Married?</strong></label><br>
 
-        <input type='radio' name='marriedYes'<?php if($marriedYes != '') echo 'Checked'; ?> >
+        <input type='radio' name='marriedYes' value="<?= $status; ?>" <?php if($marriedYes != '') echo 'Checked'; ?> >
         <label for ='mYes'>Yes</label>
         
         <br>
 
-        <input type='radio' name='marriedNo' <?php if($marriedNo != '') echo 'Checked'; ?>>
+        <input type='radio' name='marriedNo' value="<?= $status; ?>" <?php if($marriedNo != '') echo 'Checked'; ?>>
         <label for ='mNo'>No</label>
         
         <br>
@@ -115,7 +129,9 @@
 
 
         <br>
-        <button type='submit' name='submitBtn'> <?php echo $action; ?> Patient </button>
+        <button type='submit' name='submitBtn'> Update Patient </button>
+
+        <button type='submit' name='deleteBtn'> Delete Patient</button>
 
         <br>
 
@@ -127,7 +143,28 @@
     </form> <!--END OF FORM-->
 
 
-    <?php   
+    <?php
+
+
+        
+
+
+        if(isset($_POST['deleteBtn'])) {
+
+            $id = filter_input(INPUT_POST, 'patientId', FILTER_VALIDATE_INT);
+
+            deletePatient($id);
+
+            var_dump($id);
+
+            header('Location: index.php');
+        }
+
+
+
+        
+
+    
 
         $error1 = 0; //creating a error var
         $error2 = 0; //creating a error var
@@ -141,7 +178,11 @@
 
         if(isset($_POST['submitBtn'])) {        //all of my code will activate once my submit btn is pressed
 
+           
+
             echo '<hr/> Form Submited <br/>';
+
+            
 
             $firstName = filter_input(INPUT_POST, 'fName');                 //grabbing my first name and storing it
 
@@ -241,16 +282,18 @@
             {
 
                 //displaying my data along with the else statement
+                
 
                 
 
-                $action = filter_input(INPUT_GET, 'action');
+                //updatePatient($id, $firstName, $lastName, $status, $age);
 
-                $id = filter_input(INPUT_GET, 'patientId');
+                
 
             
-
-                
+                $id = filter_input(INPUT_POST, 'patientId', FILTER_VALIDATE_INT);
+    
+                $results = updatePatient($id, $firstName, $lastName, $status, $age);
 
                 echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
 
@@ -267,13 +310,18 @@
                     echo 'Married: Yes<br>';
                 }
 
-                if (isPostRequest()) {
+               
 
-                    
-                    $result = updatePatient ($id, $firstName, $lastName, $status, $age);
-                    
-                    echo "Paitent Updated";
-                }
+                
+               
+
+                echo "Paitent Updated";
+
+
+                header('Location: index.php');
+
+               
+            
 
             
 
@@ -285,15 +333,23 @@
             {       //if error equals anything else this means that something happened along the way and I need to go back and correct
 
                 echo 'Please fix your errors';
+
+
+                header('Location: index.php');
+
+                
+
             }
 
            
 
         } else{
+
             echo '<hr/>Loading information';
+
+            
         }
 
-       
 
 
     ?>
