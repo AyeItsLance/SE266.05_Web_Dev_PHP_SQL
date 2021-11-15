@@ -2,24 +2,75 @@
 
     $pwd ="password12345678";    //creating and storing password, and immeditally hashing it but after the hash we reset the pwd to null 
 
-    $storeInDB = sha1($pwd.$salt);
+
+    
+
+    //$storeInDB = sha1($pwd.$salt);
 
 
-    $pwd = '';
+   
+
+
+    // $userName = 'donald';
+
+    // $pw = "duck";
+
+    // $salt = 'secret stuff';
+
+    // $protectedPW = sha1($pw.$salt);
+
+
+    
+
+
 
 
 
     include __DIR__ . "/functions.php";
 
-    if(isPostRequest()){
-        $userName = filter_input(INPUT_POST,'userName');
-        
-        $password = filter_input(INPUT_POST, 'password');
-    }
+    include __DIR__ . "/model_schools.php";
+
+
+    //insertIntoDB($userName, $protectedPW);
+
+    // $pw = '';
+
+    // $salt = '';
+
+    // $protectedPW = "";
+
+    //after inserting it into my db I comment it out so the code doesn't keep running on start up
+
+  
 
 
     //my code here
 
+
+    if(isPostRequest()) {
+
+        $username = filter_input(INPUT_POST, 'userName');
+        $password = filter_input(INPUT_POST, 'password');
+       
+        $stmt = checkLogin($username, $password);
+
+
+        if($stmt > 0){
+
+
+            header('Location: upload.php');
+            
+
+
+        }
+
+        else{
+
+            echo 'login failed!';
+        }
+        
+    
+    }
 
 
 
@@ -43,7 +94,7 @@
 <body>
 
     <div id="mainDiv">
-        <form method="post" action="login.php">
+        <form method="post" action="index.php">
            
             <div class="rowContainer">
                 <h3>Please Login</h3>
