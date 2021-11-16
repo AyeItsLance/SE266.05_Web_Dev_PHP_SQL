@@ -6,7 +6,7 @@
     if (isset ($_FILES['file1'])) {
 
         
-        $tmp_name = $_FILES['file1']['tmp_name'];
+        $tmp_name = $_FILES['file1']['tmp_name'];  
 
         $path = getcwd() .DIRECTORY_SEPARATOR . 'uploads';
 
@@ -22,7 +22,7 @@
         
     }
 
-    include_once __DIR__ . "/header.php";
+    include_once __DIR__ . "/header.php";       //including my header which contains my session vars
 
 ?>  
     <h2>Upload File</h2>

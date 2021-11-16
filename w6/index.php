@@ -60,12 +60,12 @@
         if($stmt > 0){
 
 
-            $_SESSION["loggedIn"] = true;
+            $_SESSION["loggedIn"] = true;       //once logged in and actually logged in this will set the loggedIn session var to true, but everything you're initally loaded onto the site you start off whith it being false,
             
 
             
 
-            header('Location: upload.php');
+            header('Location: upload.php');     //pushes user to the upload document
             
 
 
@@ -73,7 +73,7 @@
 
         else{
 
-            echo 'login failed!';
+            echo 'login failed!';       //will display if login fails
         }
         
     

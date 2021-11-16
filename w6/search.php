@@ -3,7 +3,7 @@
     include_once __DIR__ . "/functions.php";
    
     session_start();
-    $schoolName = "";
+    $schoolName = "";      
     $city = "";
     $state = "";        //this is forcing all the vars to equal blank and or nothing, so when the get schools functions runs it will just display everything since there isn't anything being searched
 
@@ -16,7 +16,7 @@
 
         $city = filter_input(INPUT_POST, 'city');
 
-        $state = filter_input(INPUT_POST, 'state');
+        $state = filter_input(INPUT_POST, 'state');     //grabbing the information of what the user is entering
         
         $results = getSchools($schoolName, $city, $state);
     }

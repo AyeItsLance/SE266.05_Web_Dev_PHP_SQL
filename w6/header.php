@@ -2,7 +2,7 @@
 
   if($_SESSION["loggedIn"] == false) {
 
-    header('Location: index.php');
+    header('Location: index.php');    //simple and easy way for my session vars hope this is alright
 
 
   }
