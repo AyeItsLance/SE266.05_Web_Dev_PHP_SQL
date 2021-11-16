@@ -56,7 +56,7 @@
     }
 
     function getSchools ($name, $city, $state) {
-        global $db;     //my function for grabbing schools
+        global $db;
         
         $binds = array();
         $sql = "SELECT id, schoolName, schoolCity, schoolState FROM schools WHERE 0=0 ";
@@ -76,12 +76,11 @@
         
         $stmt = $db->prepare($sql);
        
-        $results = array();
-        if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-
-        return ($results);
+         $results = array();
+         if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         }
+         return ($results);
     }
 
     function checkLogin ($userName, $password) {

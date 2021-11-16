@@ -42,7 +42,9 @@
     //after inserting it into my db I comment it out so the code doesn't keep running on start up
 
   
+    session_start();
 
+    $_SESSION["loggedIn"] = false;
 
     //my code here
 
@@ -57,6 +59,11 @@
 
         if($stmt > 0){
 
+
+            $_SESSION["loggedIn"] = true;
+            
+
+            
 
             header('Location: upload.php');
             

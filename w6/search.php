@@ -2,18 +2,41 @@
     include_once __DIR__ . "/model_schools.php";
     include_once __DIR__ . "/functions.php";
    
-    
+    session_start();
     $schoolName = "";
     $city = "";
-    $state = "";
+    $state = "";        //this is forcing all the vars to equal blank and or nothing, so when the get schools functions runs it will just display everything since there isn't anything being searched
+
+    $results = getSchools($schoolName, $city, $state);
     if (isPostRequest()) {
     // your search logic goes here. Call getSchools with the appropriate arguments
-      
+
+        //now when the search button is actually pressed then it will take the data of what the user has entered and run the program!
+        $schoolName = filter_input(INPUT_POST, 'schoolName');
+
+        $city = filter_input(INPUT_POST, 'city');
+
+        $state = filter_input(INPUT_POST, 'state');
+        
+        $results = getSchools($schoolName, $city, $state);
     }
     include_once __DIR__ . "/header.php";
 ?>
+<style>
+
+    thead{
+        color: black;
+
+        font-size: 25px;
+    }
+
+
+
+</style>
 
             <h2>Search Schools</h2>
+
+            
             <form method="post" action="search.php">
                 <div class="rowContainer">
                    <div class="col1">School Name:</div>
@@ -34,7 +57,35 @@
             </form>
             
             <p>This is where your search results go</p>
+
+            <thead>
+                <br>
+                <tr>
+                    <strong>        <!--Displaying a little header for visual reasons-->
+                        <th>School Name</th>
+                        <th>|</th>
+                        <th>City</th>
+                        <th>|</th>
+                        <th>State</th>
+                    </strong>
+                </tr>
+                <br> 
+            </thead>
+
+            <?php foreach ($results as $row): ?>
+                <tr>
+                    <br>    <!--Displaying my data before and after my search-->
+                    <td><?php echo $row['schoolName']; ?></td>
+                    <td>,</td>
+                    <td><?php echo $row['schoolCity']; ?></td>
+                    <td>,</td>
+                    <td><?php echo $row['schoolState']; ?></td>
+                    <br>            
+                </tr>
+            <?php endforeach; ?>
             <?php
+
+                
             
                 include_once __DIR__ . "/footer.php";
             ?>

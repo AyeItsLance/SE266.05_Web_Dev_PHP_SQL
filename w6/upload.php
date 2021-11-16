@@ -2,7 +2,7 @@
 <?php
     include_once __DIR__ . "/model_schools.php";
     include_once __DIR__ . "/functions.php";
-    
+    session_start();
     if (isset ($_FILES['file1'])) {
 
         
