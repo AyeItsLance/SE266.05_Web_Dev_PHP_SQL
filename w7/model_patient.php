@@ -162,6 +162,53 @@ function sortPatient($column, $order){
 
 }
 
+function checkLogin ($userName, $password) {
+    global $db;
+    $stmt = $db->prepare("SELECT id FROM users WHERE userName =:userName AND userPassword = :password");
+    
+    $stmt->bindValue(':userName', $userName);
+    $stmt->bindValue(':password', sha1($password. "secret stuff"));
+        
+    $stmt->execute ();
+       
+    return( $stmt->rowCount() > 0);
+        
+}
+
+function grabPatient ($firstName, $lastName, $birthDate, $married){
+
+    global $db;
+        
+    $binds = array();
+    $sql = "SELECT id, patientFirstName, patientLastName, patientBirthDate, patientMarried FROM patients WHERE 0=0 ";
+
+    if ($firstName != "") {
+        $sql .= " AND patientFirstName LIKE :patientFirstName";
+        $binds['patientFirstName'] = '%'.$firstName.'%';
+    }
+       
+    if ($lastName != "") {
+        $sql .= " AND patientLastName LIKE :patientLastName";
+        $binds['patientLastName'] = '%'.$lastName.'%';
+    }
+    if ($married != "") {
+        $sql .= " AND patientMarried LIKE :patientMarried";
+        $binds['patientMarried'] = '%'.$married.'%';
+    }
+    if ($birthDate != "") {
+        $sql .= " AND patientBirthDate LIKE :patientBirthDate";
+        $binds['patientBirthDate'] = '%'.$birthDate.'%';
+    }
+        
+    $stmt = $db->prepare($sql);
+       
+    $results = array();
+    if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+    return ($results);
+}
+
 
 
 

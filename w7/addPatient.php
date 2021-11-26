@@ -1,14 +1,26 @@
+<?php
+
+    session_start();
+
+
+    include_once __DIR__ . "/header.php";
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Patient</title>  
+    <title>Add Patient</title>  
 </head>
 <body>
 
     <?php
+
+        
 
         //COPIED OVER FROM WEEK 4
         include __DIR__ . '/functions.php';
@@ -43,41 +55,7 @@
 
         $marriedNo = filter_input(INPUT_POST, 'marriedNo');     
 
-        $age = filter_input(INPUT_POST, 'birthDate');     
-        
-        
-        $action = filter_input(INPUT_GET, 'action');
-
-        $id = filter_input(INPUT_GET, 'patientId');
-
-
-
-
-        $row = getPatients($id);
-
-        $id = filter_input(INPUT_GET, 'patientId', FILTER_VALIDATE_FLOAT);
-        
-
-        $firstName = $row['patientFirstName'];
-
-        $lastName = $row['patientLastName'];
-
-        $status = $row['patientMarried'];
-
-        $age = $row['patientBirthDate'];
-
-        
-
-    
-
-
-
-        
-
-
-        
-
-        
+        $age = filter_input(INPUT_POST, 'birthDate');           
 
     ?>
 
@@ -85,43 +63,31 @@
 
     <!--ALL MY FORM INFORMATIONS-->
 
-    <form action='editPatient.php' method='post'>
-
-    
-
-
-        
-
-
-        
-        <input type="hidden" name="patientId" value="<?= $id;?>">
-
-      
-
+    <form action='addPatient.php' method='post'>
         <label><strong>First Name</strong></label>
-        <input type='text' name='fName' placeholder='First Name' value="<?= $firstName; ?>" />
+        <input type='text' name='fName' placeholder='First Name' value="<?php echo $firstName; ?>" />
 
         <label><strong>Last Name</strong></label>
-        <input type='text' name='lName' placeholder='Last Name' value="<?= $lastName; ?>"/>
+        <input type='text' name='lName' placeholder='Last Name' value="<?php echo $lastName; ?>"/>
 
         <br>
         <br>
 
         <label for='married'><strong>Married?</strong></label><br>
 
-        <input type='radio' name='marriedYes' value="<?= $status; ?>" <?php if($marriedYes != '') echo 'Checked'; ?> >
+        <input type='radio' name='marriedYes'<?php if($marriedYes != '') echo 'Checked'; ?> >
         <label for ='mYes'>Yes</label>
         
         <br>
 
-        <input type='radio' name='marriedNo' value="<?= $status; ?>" <?php if($marriedNo != '') echo 'Checked'; ?>>
+        <input type='radio' name='marriedNo' <?php if($marriedNo != '') echo 'Checked'; ?>>
         <label for ='mNo'>No</label>
         
         <br>
         <br>
 
         <label><strong>Date of Birth</strong></label>
-        <input type='date' name='birthDate' value="<?= $age; ?>" />
+        <input type='date' name='birthDate' value="<?php echo $age; ?>" />
 
         <br>
 
@@ -129,13 +95,11 @@
 
 
         <br>
-        <button type='submit' name='submitBtn'> Update Patient </button>
-
-        <button type='submit' name='deleteBtn'> Delete Patient</button>
+        <input type='submit' name='submitBtn' />
 
         <br>
 
-        <a href="index.php">Return to Patient List</a>
+        <a href="menu.php">Return to Patient List</a>
 
 
        
@@ -143,28 +107,7 @@
     </form> <!--END OF FORM-->
 
 
-    <?php
-
-
-        
-
-
-        if(isset($_POST['deleteBtn'])) {
-
-            $id = filter_input(INPUT_POST, 'patientId', FILTER_VALIDATE_INT);
-
-            deletePatient($id);
-
-            var_dump($id);
-
-            header('Location: index.php');      //creating my own button for delete once pressed the delete function runs
-        }
-
-
-
-        
-
-    
+    <?php   
 
         $error1 = 0; //creating a error var
         $error2 = 0; //creating a error var
@@ -174,15 +117,9 @@
 
         //first we will be setting up the first and last names
 
-
-
         if(isset($_POST['submitBtn'])) {        //all of my code will activate once my submit btn is pressed
 
-           
-
             echo '<hr/> Form Submited <br/>';
-
-            
 
             $firstName = filter_input(INPUT_POST, 'fName');                 //grabbing my first name and storing it
 
@@ -282,18 +219,8 @@
             {
 
                 //displaying my data along with the else statement
-                
 
-                
-
-                //updatePatient($id, $firstName, $lastName, $status, $age);
-
-                
-
-            
-                $id = filter_input(INPUT_POST, 'patientId', FILTER_VALIDATE_INT);
-    
-                $results = updatePatient($id, $firstName, $lastName, $status, $age);            //storing the update function into results
+                $resluts = addPatient ($firstName, $lastName, $status, $age);    //calling my add patient function which will actually add my patient
 
                 echo 'Full Name: ', $firstName, ' ', $lastName, '<br>';
 
@@ -310,18 +237,10 @@
                     echo 'Married: Yes<br>';
                 }
 
-               
-
-                
-               
-
-                echo "Paitent Updated";
-
-
-                header('Location: index.php');      //once the update function fully runs user gets sent back to main page
-
-               
+                if (isPostRequest()) {
             
+                    echo "Paitent added";
+                }
 
             
 
@@ -333,23 +252,15 @@
             {       //if error equals anything else this means that something happened along the way and I need to go back and correct
 
                 echo 'Please fix your errors';
-
-
-                header('Location: index.php');      //forcing user back to main page even for errors
-
-                
-
             }
 
            
 
         } else{
-
             echo '<hr/>Loading information';
-
-            
         }
 
+       
 
 
     ?>

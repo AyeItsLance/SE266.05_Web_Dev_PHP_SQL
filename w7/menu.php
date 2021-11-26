@@ -1,9 +1,15 @@
 <?php
 
+
+    session_start();
     include __DIR__ .'/model_patient.php';
+
+   
 
     $patient = GetPatient();        //running my get patient command
 
+
+    include_once __DIR__ . "/header.php";
 
 ?>
 <!DOCTYPE html>
@@ -55,14 +61,31 @@ thead{
 }
 
 
+#search{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+
+    font-size: 20px;
+}
+
+
+
+
 </style>
+
+
+
 <body>
 
 <div class="container">
         
     <div class="col-sm-offset-2 col-sm-10">
         <h1>Patient List</h1>
+
+        <a id='search' href="patient_search.php">Patient Search</a> <!--Adding a new link that leads to patient search-->
+
+        <br>
     
+        <br>
    
   
     <table class="table table-striped">
