@@ -2,40 +2,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Schools upload and search</title>
+  <title>Cars</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style type="text/css">
-        #mainDiv {margin-left: 100px; margin-top: 100px;}
-        .col1 {width: 100px; float: left;}
-        .col2 {float: left;}
-        .rowContainer {clear: left; height: 40px;}
-        .error {margin-left: 100px; clear: left; height: 40px; color: red;}
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
-    </style>
+      
+
+    #center{
+
+      
+      text-align: center;
+      
+      border: 3px solid gray;
+
+
+    }
+
+        
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav id='center' class="navbar navbar-inverse">
+
   <div class="container-fluid">
+
     <div class="navbar-header">
-      <a href="ineex.php" class="navbar-brand">Main Menu</span>
+      <a href="index.php" class="navbar-brand">Main Menu</a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+    <ul class="nav navbar-nav">
+      <li> <a href="search.php" class="navbar-brand">Search Cars</a> </li>
     </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="login.php"><span class="glyphicon glyphicon-log-out"></span> Login</a></li>
+    </ul>
+
   </div>
+
 </nav>
   
 <div class="container">
