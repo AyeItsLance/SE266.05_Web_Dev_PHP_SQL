@@ -14,16 +14,16 @@
     include __DIR__ . "/model_car.php";
 
     // $user1 = 'donald';
-    // $pw1 = 'duck';
-    // $protectedPW1 = sha1($pw1. "secret stuff");
+    // $pw1 = '';
+    // $protectedPW1 = 
 
     // $user2 = 'mickey';
-    // $pw2 = 'mouse';
-    // $protectedPW2= (sha1($pw2. "secret stuff"));
+    // $pw2 = '';
+    // $protectedPW2= 
 
     // $user3 = 'goofy';
-    // $pw3 = 'dog';
-    // $protectedPW3 = (sha1($pw3. "secret stuff"));
+    // $pw3 = '';
+    // $protectedPW3 = 
     
     // insertIntoDB($user3, $protectedPW3);
 
