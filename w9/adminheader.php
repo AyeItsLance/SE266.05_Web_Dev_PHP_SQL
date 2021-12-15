@@ -1,4 +1,19 @@
-<!--THIS IS MY MAIN HEADER FOR BUYERS-->
+<?php
+
+  if($_SESSION["loggedIn2"] == false) {
+
+    header('Location: index.php');    //simple and easy way for my session vars hope this is alright
+
+
+  }
+
+  else{
+
+
+  }
+?>
+
+<!--THIS IS MY ADMIN ACCOUNT HEADER-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +46,11 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-      <a href="index.php" class="navbar-brand">Main Menu</a>
+      <a href="admin.php" class="navbar-brand">Main Menu</a>
     </div>
 
-    <ul class="nav navbar-nav">
-      <li> <a href="car_search.php" class="navbar-brand">Search Cars</a> </li>
-    </ul>
-
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="login.php"><span class="glyphicon glyphicon-log-out"></span> Login</a></li>
+      <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
 
   </div>
