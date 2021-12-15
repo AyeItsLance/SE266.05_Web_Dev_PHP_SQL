@@ -19,7 +19,7 @@
 
 
         if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-            $results = "Person Added";     //if command works print out patient added
+            $results = "Person Added";     //if command works print out cars added
         }
 
 
@@ -126,7 +126,7 @@
 
     function addCar ($carMake, $carModel, $carYear, $carMiles, $carColor, $accountID)  {
     
-        //craeting my add patient function that will actually add to my db
+        //craeting my add car function that will actually add to my db
     
     
         global $db;
@@ -147,7 +147,7 @@
     
         if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
 
-            $results = "Car Added";     //if command works print out patient added
+            $results = "Car Added";     //if command works print out car added
         }
     
     }
@@ -189,7 +189,7 @@
             
         if ($stmt->execute() && $stmt->rowCount() > 0) {
     
-            $results = 'Car Deleted';       //if stmt works then patient deleted will be printed
+            $results = 'Car Deleted';       //if stmt works then car deleted will be printed
     
         }
         

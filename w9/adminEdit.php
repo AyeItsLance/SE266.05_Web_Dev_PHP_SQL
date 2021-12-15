@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Cars</title>  
+    <title>Admin Edit Cars</title>  
 </head>
 <body>
 
@@ -231,7 +231,7 @@
                     //displaying my data along with the else statement
                     $id = filter_input(INPUT_POST, 'carID', FILTER_VALIDATE_INT);
 
-                    $resluts = updateCar($id, $carMake, $carModel, $carYear, $carMiles, $carColor, 1);    //calling my add patient function which will actually add my patient
+                    $resluts = updateCar($id, $carMake, $carModel, $carYear, $carMiles, $carColor, 1);    //calling my add cars function which will actually add my cars
 
                     
 

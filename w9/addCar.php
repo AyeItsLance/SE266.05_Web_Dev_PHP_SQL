@@ -163,7 +163,7 @@
 
                     //displaying my data along with the else statement
 
-                    $resluts = addCar($carMake, $carModel, $carYear, $carMiles, $carColor, 1);    //calling my add patient function which will actually add my patient
+                    $resluts = addCar($carMake, $carModel, $carYear, $carMiles, $carColor, 1);    //calling my add cars function which will actually add my cars
 
                     
 
